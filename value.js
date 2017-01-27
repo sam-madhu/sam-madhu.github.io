@@ -500,31 +500,31 @@ function decreaseValue20()
 //define costs
 
 // var cost = 10;
-var cost1 = 120;
-var cost2 = 150;
-var cost3 = 130;
-var cost4 = 700;
-var cost5 = 250;
-var cost6 = 80;
-var cost7 = 400;
-var cost8 = 90;
-var cost9 = 130;
-var cost10 = 140;
-var cost11 = 170;
-var cost12 = 240;
-var cost13 = 260;
-var cost14 = 220;
-var cost15 = 230;
-var cost16 = 300;
-var cost17 = 400;
-var cost18 = 500;
-var cost19 = 200;
-var cost20 = 120;
+var cost1 = 350;
+var cost2 = 350;
+var cost3 = 310;
+var cost4 = 420;
+var cost5 = 310;
+var cost6 = 255;
+var cost7 = 255;
+var cost8 = 220;
+var cost9 = 190;
+var cost10 = 175;
+var cost11 = 160;
+var cost12 = 220;
+var cost13 = 190;
+var cost14 = 190;
+var cost15 = 160;
+var cost16 = 160;
+var cost17 = 80;
+// var cost18 = 500;
+// var cost19 = 200;
+// var cost20 = 120;
 
 
 
 function findTotal(){ 
-    var val1, val2, result; 
+    var val1, val2, result;
     val1 = parseInt(document.getElementById('number1').value, 10)*cost1;
     val2 = parseInt(document.getElementById("number2").value, 10)*cost2;
     val3 = parseInt(document.getElementById('number3').value, 10)*cost3;
@@ -538,8 +538,12 @@ function findTotal(){
     val11 = parseInt(document.getElementById('number11').value, 10)*cost11;
     val12 = parseInt(document.getElementById("number12").value, 10)*cost12;
     val13 = parseInt(document.getElementById("number13").value, 10)*cost13;
+    val14 = parseInt(document.getElementById("number14").value, 10)*cost14;
+    val15 = parseInt(document.getElementById('number15').value, 10)*cost15;
+    val16 = parseInt(document.getElementById("number16").value, 10)*cost16;
+    val17 = parseInt(document.getElementById("number17").value, 10)*cost17;
 
-    result =  (val1+val2+val3+val4+val5+val6+val7+val8+val9+val10+val11+val12+val13); 
+    result =  (val1+val2+val3+val4+val5+val6+val7+val8+val9+val10+val11+val12+val13+val14+val15+val16+val17); 
 
     var height = $(document).height();
 

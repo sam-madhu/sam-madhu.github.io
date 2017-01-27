@@ -29,64 +29,72 @@
 	}
 
 	.one{
-		background-color: #EF1100;
+		background-color: #EA0707;
 	}
 
 	.two{
-		background-color: #F52C13;
+		background-color: #EF0606;
 	}
 
 	.three{
-		background-color: #F53A15;
+		background-color: #F02A05;
 	}
 
 	.four{
-		background-color: #F64917;
+		background-color: #F13708;
 	}
 
 	.five{
-		background-color: #F65719;
+		background-color: #F1430B;
 	}
 
 	.six{
-		background-color: #F6661B;
+		background-color: #F2500D;
 	}
 
 	.seven{
-		background-color: #F6741D;
+		background-color: #F25C10;
 	}
 
 	.eight{
-		background-color: #F69121;
+		background-color: #F36913;
 	}
 
 	.nine{
-		background-color: #F69F23;
+		background-color: #F37516;
 	}
 
 	.ten{
-		background-color: #F7AE25;
+		background-color: #F38218;
 	}
 
 	.eleven{
-		background-color: #F7BC27;
+		background-color: #F48E1B;
 	}
 
 	.twelve{
-		background-color: #F7CB29;
+		background-color: #F49B1E;
 	}
 
 	.thirteen{
+		background-color: #F5A720;
+	}
+
+	.fourteen{
+		background-color: #F5B323;
+	}
+ 
+	.fifteen{
+		background-color: #F6C026;
+	}
+
+	.sixteen{
+		background-color: #F7CC28;
+	}
+ 
+	.seventeen{
 		background-color: #F7D92B;
 	}
-
-/*	.fourteen{
-		background-color: #EF1100;
-	}
-
-	.fifteen{
-		background-color: #EF1100;
-	}*/
 
 
 	#container{
@@ -98,9 +106,9 @@
 		background-color: #2d2d2d;
 		padding-top: 20px;
 		padding-bottom: 20px;
-		height: 30px;
+		height: 20px;
 		top: 0px;
-		font-size: 14pt;
+		font-size: 14px;
 		text-align: center;
 	}
 
@@ -114,9 +122,9 @@
 		background-color: #2d2d2d;
 		padding-top: 20px;
 		padding-bottom: 20px;
-		height: 30px;
+		height: 20px;
 		bottom: 0px;
-		font-size: 14pt;
+		font-size: 14px;
 		text-align: center;
 		position: fixed;
 	}
@@ -124,7 +132,7 @@
 
 	.list{
 		margin-top: 0px;
-		margin-bottom: 70px;
+		margin-bottom: 60px;
 	}
 
 	.listitem{
@@ -214,7 +222,7 @@
 	.positiontitle{
 		width: 50%;
 		float: left;
-		font-size: 12pt;
+		font-size: 14px;
 		opacity: 1;
 		
 	}
@@ -230,9 +238,9 @@
 		background-color: #2d2d2d;
 		padding-top: 20px;
 		padding-bottom: 20px;
-		height: 30px;
+		height:20px;
 		bottom: 0px;
-		font-size: 14pt;
+		font-size: 14px;
 		text-align: center;
 		position: fixed;
 		display: none;
