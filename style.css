@@ -1,0 +1,279 @@
+	@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+	*{
+		padding: 0;
+		margin: 0;
+		
+	}
+
+	body{
+		background: #373737; /* For browsers that do not support gradients */
+		color: white;
+		font-size: 24px;
+		font-family: 'Quicksand', Arial, sans-serif;
+		width: 100%;
+		height: 100%;
+	}
+
+	#splash{
+		background-color: #2d2d2d;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 1;
+		text-align: center;
+		overflow-y: hidden;
+		padding-top: 45vh;
+	}
+
+	.one{
+		background-color: #EF1100;
+	}
+
+	.two{
+		background-color: #F52C13;
+	}
+
+	.three{
+		background-color: #F53A15;
+	}
+
+	.four{
+		background-color: #F64917;
+	}
+
+	.five{
+		background-color: #F65719;
+	}
+
+	.six{
+		background-color: #F6661B;
+	}
+
+	.seven{
+		background-color: #F6741D;
+	}
+
+	.eight{
+		background-color: #F69121;
+	}
+
+	.nine{
+		background-color: #F69F23;
+	}
+
+	.ten{
+		background-color: #F7AE25;
+	}
+
+	.eleven{
+		background-color: #F7BC27;
+	}
+
+	.twelve{
+		background-color: #F7CB29;
+	}
+
+	.thirteen{
+		background-color: #F7D92B;
+	}
+
+/*	.fourteen{
+		background-color: #EF1100;
+	}
+
+	.fifteen{
+		background-color: #EF1100;
+	}*/
+
+
+	#container{
+		background: #373737;
+	}
+
+	.header, .header2{
+		width: 100%;
+		background-color: #2d2d2d;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		height: 30px;
+		top: 0px;
+		font-size: 14pt;
+		text-align: center;
+	}
+
+	.header2{
+		position: fixed;
+		display: none;
+	}
+
+	.next1, .next2{
+		width: 100%;
+		background-color: #2d2d2d;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		height: 30px;
+		bottom: 0px;
+		font-size: 14pt;
+		text-align: center;
+		position: fixed;
+	}
+
+
+	.list{
+		margin-top: 0px;
+		margin-bottom: 70px;
+	}
+
+	.listitem{
+		width: 90%;
+		height: 45px;
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-top: 15px;
+		
+	}
+
+	.last{
+		margin-bottom: 80px;
+	}
+
+
+	.add, .minus, .null{
+		font-family: 'Quicksand', Arial, sans-serif;
+		font-size: 24px;
+		border: 0;
+		width: 50px;
+	}
+
+	.add, .minus{
+		width: 10%;
+		color: #ffffff;
+		background-color: transparent;
+		font-size: 20pt;
+		opacity: 0.6;
+		
+	}
+
+	.add, .minus, .null{
+		float: right;
+	}
+
+
+	.null {
+		text-align: center;
+		width: 10%;
+		font-size: 20pt;
+		color: white;
+		pointer-events: none;
+		background-color: transparent;
+		opacity: 1;
+	}
+
+	.totalboom{
+		padding-top: 30vh;
+		width: 100vw;
+		display: none;
+	}
+
+	.settime{
+		display: none;
+	}
+
+	.next2{
+		display: none;
+	}
+
+	.total, .dollar {
+		font-size: 40pt;
+		color: white;
+		pointer-events: none;
+		background-color: transparent;
+		opacity: 0.8;
+		font-family: 'Quicksand', Arial, sans-serif;
+		border: 0px;
+	}
+
+	.dollar{
+		text-align: left;
+		width: 10%;
+		float: left;
+		padding-left: 5%;
+	}
+
+	.total{
+		text-align: right;
+		width: 80%;
+		float: right;
+		padding-right: 5%;
+	}
+
+
+	.positiontitle{
+		width: 50%;
+		float: left;
+		font-size: 12pt;
+		opacity: 1;
+		
+	}
+
+
+	#timer{
+		opacity: 0.5;
+		font-size: 15vw;
+	}
+
+	.stop, .restart{
+		width: 100%;
+		background-color: #2d2d2d;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		height: 30px;
+		bottom: 0px;
+		font-size: 14pt;
+		text-align: center;
+		position: fixed;
+		display: none;
+	}
+
+	.summary{
+		display: none;
+	}
+
+	#timeline{
+		text-align: center;
+		padding-top: 30vh;
+		display: none;
+		width: 100%;
+	}
+
+	.bar{
+		font-size: 20pt;
+		padding-left: 1vw;
+		padding-right: 1vw;
+		vertical-align: middle;
+	}
+
+	.small{
+		font-size: 10pt;
+	}
+
+	.time, #hours, #mins{
+		font-size: 80pt;
+		color: #ffffff;
+		background-color: #373737;
+		border: 0px;
+		width: 40%;
+	}
+
+	.hourglass{
+		width: 100%;
+	    height: 10px;
+	    padding-top: 60px;
+	    background-color: yellow;
+	    position: absolute;
+	    bottom: 0;
+	    z-index: 0;
+	}
