@@ -524,7 +524,11 @@ var cost17 = 80;
 
 
 function findTotal(){ 
-    var val1, val2, result;
+    
+var val1, val2, val3, val4, val5, 
+val6, val7, val8, val9, val10, val11, val12, val13, val14, val15, val16, val17, 
+result, height, hours, mins, totalhours, totalmins, timer;
+
     val1 = parseInt(document.getElementById('number1').value, 10)*cost1;
     val2 = parseInt(document.getElementById("number2").value, 10)*cost2;
     val3 = parseInt(document.getElementById('number3').value, 10)*cost3;
@@ -558,6 +562,7 @@ function findTotal(){
 
     var timer = totalhours + totalmins;
 
+    // var timediff = timer/9;
 
 
 //animate counter and hourglass
@@ -569,6 +574,35 @@ function findTotal(){
     }, {
         duration: timer,
         easing: 'linear',
+        complete: function(){
+            $('.fadeout').animate({'opacity': 0.5, 'padding-top': 120},{duration:500});
+            $('.overtime').animate({'opacity': 1},{duration:500});
+        },
+        step: function (now) {
+            // $(this).text(Math.ceil(now));
+            $(this).text(now.toFixed(2)); 
+            $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
+        }
+
+    });
+
+    $('.hourglass').animate({ 
+    'padding-top' : height - 72,
+    'backgroundColor' : "#ff0000",
+  }, timer);
+
+
+
+// overtime
+
+
+    $('#moneyovertime').text(result*100);
+
+    $('#moneyovertime').delay(timer).prop('Counter',0).animate({
+        Counter: $('#moneyovertime').text()
+    }, {
+        duration: timer*100,
+        easing: 'linear',
         step: function (now) {
             // $(this).text(Math.ceil(now));
             $(this).text(now.toFixed(2)); 
@@ -576,27 +610,30 @@ function findTotal(){
         }
     });
 
-    $(".hourglass").animate({ 
-    'padding-top' : height - 10,
-    'backgroundColor' : "#ff0000",
-  }, timer);
-
-
-    $('.stop').click(function() {
-    $('#numbertotal').stop();
-    $('.hourglass').stop();
-    });
 
 // if you didnt enter any attendees or time, resort to default timer screen
 
     if (result == 0) {
-    $('.hourglass').stop();
+    $('.hourglass').hide();
+    $('#numbertotal').text(0);
+    $('.overtime').hide();
+    $('.fadeout').stop();
  }
 
     if (timer == 0) {
     $('.hourglass').hide();
     $('#numbertotal').text(0);
+    $('.overtime').hide();
+    $('.fadeout').stop();
  }
+
+
+// stop counting
+    $('.stop').click(function() {
+    $('#numbertotal').stop();
+    $('.hourglass').stop();
+    $('#moneyovertime').stop();
+    });
 
 
 }
