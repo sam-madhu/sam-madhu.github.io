@@ -540,9 +540,7 @@ $('.next2').click(function(){
       startTimer();
 });
 
-// $('.stop').click(function(){
-//       clearTimeout(timex);
-// });
+
 
 $('#reset').click(function(){
       hours =0;      mins =0;      seconds =0;
@@ -724,8 +722,6 @@ result, height, hours, mins, totalhours, totalmins, timer;
     $('.hourglass').stop();
     $('#moneyovertime').stop();
     clearTimeout(timex);
-    clearTimeout(timey);
-
 
     //calculate summary values
 
