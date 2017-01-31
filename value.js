@@ -568,7 +568,7 @@ function startTimer(){
      
     
       startTimer();
-  },60); 
+  },6); 
   // fuck with this to speed time, default is 1000
 }
 
@@ -593,7 +593,7 @@ function startTimerTwo(){
      
     
       startTimerTwo();
-  },60); 
+  },6); 
   // fuck with this to speed time, default is 1000
 }
 
@@ -744,7 +744,48 @@ result, height, hours, mins, totalhours, totalmins, timer;
     $('.overcost1').text(overhours);
     $('.overcost2').text(overmins);
 
+    //saved money and time
+
+    var moneysaved = parseFloat(result - finalcost1).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+
+    $('.savecost').text(moneysaved);
+
+    var hourssaved = parseFloat(thehours) - parseFloat(finalhours);
+    var minssaved = parseFloat(themins) - parseFloat(finalmins);
+
+    $('.savetime1').text(hourssaved);
+    $('.savetime2').text(minssaved);
+
+    if(hourssaved <10) 
+        {$(".savetime1").text('0'+hourssaved)} 
+    else {$(".savetime1").text(hourssaved);
+        }
+    if(minssaved <10) 
+        {$(".savetime2").text('0'+minssaved)} 
+    else {$(".savetime2").text(minssaved);
+        }
+
+
+    //hide or show overtime or save
+
+    if(totalcost1 < result) 
+        {
+            $('.over').hide();
+            $('.save').show();
+        } 
+    
+    if(totalcost1 > result) 
+        {
+            $('.save').hide();
+            $('.over').show();
+        }
+
+
     });
+
+    $('.restart').click(function(){
+      location.reload(true)
+});
 
 }
 

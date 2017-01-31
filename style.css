@@ -288,6 +288,7 @@
 	.summary{
 		display: none;
 		text-align: center;
+		margin-bottom: 10vh;
 	}
 
 	.summaryheadings{
@@ -296,7 +297,8 @@
     margin-top: 3.5vh;
 	}
 
-	.finalcost, .finaltime, .finaltime1, .finaltime2, .burncost, .overcost, .overcost1, .overcost2, .dollar1, .dollar2{
+	.finalcost, .finaltime, .finaltime1, .finaltime2, .burncost, .overcost, .overcost1, .overcost2, 
+	.dollar1, .dollar2, .savecost, .savetime, .savetime1, .savetime2, .dollar3{
 		font-size: 35pt;
 	}
 
@@ -304,7 +306,11 @@
 		color: #ff0000;
 	}
 
-	.dollar1, .dollar2{
+	.savecost, .savetime, .savetime1, .savetime2, .dollar3{
+		color: #00ff00;
+	}
+
+	.dollar1, .dollar2, .dollar3{
 		margin-right: 20px;
 	}
 
