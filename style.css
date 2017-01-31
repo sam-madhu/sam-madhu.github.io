@@ -266,6 +266,11 @@
 		opacity: 0.5;
 		font-size: 15vw;
 	}
+	
+	.ticker{
+	z-index: 5;
+    position: absolute;
+	}
 
 	.stop, .restart{
 		width: 100%;
@@ -282,6 +287,34 @@
 
 	.summary{
 		display: none;
+		text-align: center;
+	}
+
+	.summaryheadings{
+	font-size: 16px;
+    margin-bottom: 3.5vh;
+    margin-top: 3.5vh;
+	}
+
+	.finalcost, .finaltime, .finaltime1, .finaltime2, .burncost, .overcost, .overcost1, .overcost2, .dollar1, .dollar2{
+		font-size: 35pt;
+	}
+
+	.burncost, .overcost, .overcost1, .overcost2, .dollar2{
+		color: #ff0000;
+	}
+
+	.dollar1, .dollar2{
+		margin-right: 20px;
+	}
+
+	.divider{
+		opacity: 0.2;
+		width: 80%;
+		margin-left: 10%;
+		text-align: center;
+		margin-top: 2.5vh;
+		margin-bottom: 2.5vh;
 	}
 
 	#timeline{
@@ -326,7 +359,7 @@
 
 	.fadeout{
     	height: 100px;
-    	padding-top: 220px;
+    	padding-top: 35vh;
     	width: 100%;
 	}
 

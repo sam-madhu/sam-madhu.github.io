@@ -524,7 +524,58 @@ var cost17 = 80;
 
 
 function findTotal(){ 
+
+
+// setting up the timer
     
+
+var hours = 0;
+var mins = 0;
+var seconds = 0;
+
+$('.next2').click(function(){
+      startTimer();
+});
+
+// $('.stop').click(function(){
+//       clearTimeout(timex);
+// });
+
+$('#reset').click(function(){
+      hours =0;      mins =0;      seconds =0;
+  $('.hours','.mins').html('00');
+  $('.seconds').html('00');
+});
+
+function startTimer(){
+  timex = setTimeout(function(){
+      seconds++;
+    if(seconds >59){seconds=0;mins++;
+       if(mins>59) {
+       mins=0;hours++;
+         if(hours <10) {$(".hours").text('0'+hours)} else $(".hours").text(hours);
+                       }
+                       
+    if(mins<10){                     
+      $(".mins").text('0'+mins);}       
+       else $(".mins").text(mins);
+                   }    
+    if(seconds <10) {
+      $(".seconds").text('0'+seconds);} else {
+      $(".seconds").text(seconds);
+      }
+     
+    
+      startTimer();
+  },60); 
+  // fuck with this to speed time, default is 1000
+}
+
+
+
+//timer ends
+
+
 var val1, val2, val3, val4, val5, 
 val6, val7, val8, val9, val10, val11, val12, val13, val14, val15, val16, val17, 
 result, height, hours, mins, totalhours, totalmins, timer;
@@ -551,14 +602,24 @@ result, height, hours, mins, totalhours, totalmins, timer;
 
     var height = $(document).height();
 
-    var hours = document.getElementById("hours").value;
-    var mins = document.getElementById("mins").value;
+    var overtimepadding = height * 0.22;
 
-    var totalhours = hours * 3600000;
-    // var totalmins = mins * 60000;
+    // refresh height on window resize
+
+    $(window).resize(function () {
+    var height = $(document).height();
+    var overtimepadding = height * 0.22;
+});
+
+
+    var thehours = document.getElementById("hours").value;
+    var themins = document.getElementById("mins").value;
+
+    var totalhours = thehours * 3600000;
+    // var totalmins = themins * 60000;
 
     // for testing
-    var totalmins = mins * 60;
+    var totalmins = themins * 600;
 
     var timer = totalhours + totalmins;
 
@@ -575,7 +636,7 @@ result, height, hours, mins, totalhours, totalmins, timer;
         duration: timer,
         easing: 'linear',
         complete: function(){
-            $('.fadeout').animate({'opacity': 0.5, 'padding-top': 120},{duration:500});
+            $('.fadeout').animate({'opacity': 0.5, 'padding-top': overtimepadding},{duration:500});
             $('.overtime').animate({'opacity': 1},{duration:500});
         },
         step: function (now) {
@@ -633,51 +694,32 @@ result, height, hours, mins, totalhours, totalmins, timer;
     $('#numbertotal').stop();
     $('.hourglass').stop();
     $('#moneyovertime').stop();
+    clearTimeout(timex);
+
+
+    //calculate summary values
+
+    var totalcost1 = parseFloat($("#numbertotal").text().replace(/,/g,'')) 
+    + parseFloat($("#moneyovertime").text().replace(/,/g,''));
+    var totalcost2 = parseFloat($("#moneyovertime").text().replace(/,/g,''));
+    var finalcost1 = parseFloat(totalcost1).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    var finalcost2 = parseFloat(totalcost2).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    $('.finalcost').text(finalcost1); // total cost
+    $('.burncost').text(finalcost2); // amount burned
+
+    
+    var overhours = $('.hours').text();
+    var overmins = $('.mins').text();
+
+    $('.finaltime1').text(thehours);
+    $('.finaltime2').text(themins);
+    $('.overcost1').text(overhours);
+    $('.overcost2').text(overmins);
+
     });
 
-
 }
 
 
 
-var hours =0;
-var mins =0;
-var seconds =0;
-
-$('.start').click(function(){
-      startTimer();
-});
-
-$('.stop').click(function(){
-      clearTimeout(timex);
-});
-
-$('#reset').click(function(){
-      hours =0;      mins =0;      seconds =0;
-  $('#hours','#mins').html('00:');
-  $('#seconds').html('00');
-});
-
-function startTimer(){
-  timex = setTimeout(function(){
-      seconds++;
-    if(seconds >59){seconds=0;mins++;
-       if(mins>59) {
-       mins=0;hours++;
-         if(hours <10) {$("#hours").text('0'+hours+':')} else $("#hours").text(hours+':');
-                       }
-                       
-    if(mins<10){                     
-      $("#mins").text('0'+mins+':');}       
-       else $("#mins").text(mins+':');
-                   }    
-    if(seconds <10) {
-      $("#seconds").text('0'+seconds);} else {
-      $("#seconds").text(seconds);
-      }
-     
-    
-      startTimer();
-  },1000);
-}
     
