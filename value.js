@@ -532,6 +532,9 @@ function findTotal(){
 var hours = 0;
 var mins = 0;
 var seconds = 0;
+var hourstwo = 0;
+var minstwo = 0;
+var secondstwo = 0;
 
 $('.next2').click(function(){
       startTimer();
@@ -567,6 +570,31 @@ function startTimer(){
      
     
       startTimer();
+  },60); 
+  // fuck with this to speed time, default is 1000
+}
+
+
+function startTimerTwo(){
+  timey = setTimeout(function(){
+      secondstwo++;
+    if(secondstwo >59){secondstwo=0;minstwo++;
+       if(minstwo>59) {
+       minstwo=0;hourstwo++;
+         if(hourstwo <10) {$(".hours2").text('0'+hourstwo)} else $(".hours2").text(hourstwo);
+                       }
+                       
+    if(minstwo<10){                     
+      $(".mins2").text('0'+minstwo);}       
+       else $(".mins2").text(minstwo);
+                   }    
+    if(secondstwo <10) {
+      $(".seconds2").text('0'+secondstwo);} else {
+      $(".seconds2").text(secondstwo);
+      }
+     
+    
+      startTimerTwo();
   },60); 
   // fuck with this to speed time, default is 1000
 }
@@ -638,6 +666,7 @@ result, height, hours, mins, totalhours, totalmins, timer;
         complete: function(){
             $('.fadeout').animate({'opacity': 0.5, 'padding-top': overtimepadding},{duration:500});
             $('.overtime').animate({'opacity': 1},{duration:500});
+            startTimerTwo();
         },
         step: function (now) {
             // $(this).text(Math.ceil(now));
@@ -695,6 +724,7 @@ result, height, hours, mins, totalhours, totalmins, timer;
     $('.hourglass').stop();
     $('#moneyovertime').stop();
     clearTimeout(timex);
+    clearTimeout(timey);
 
 
     //calculate summary values
@@ -708,11 +738,13 @@ result, height, hours, mins, totalhours, totalmins, timer;
     $('.burncost').text(finalcost2); // amount burned
 
     
-    var overhours = $('.hours').text();
-    var overmins = $('.mins').text();
+    var finalhours = $('.hours').text();
+    var finalmins = $('.mins').text();
+    var overhours = $('.hours2').text();
+    var overmins = $('.mins2').text();
 
-    $('.finaltime1').text(thehours);
-    $('.finaltime2').text(themins);
+    $('.finaltime1').text(finalhours);
+    $('.finaltime2').text(finalmins);
     $('.overcost1').text(overhours);
     $('.overcost2').text(overmins);
 
