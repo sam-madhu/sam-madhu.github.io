@@ -682,6 +682,76 @@ result, height, hours, mins, totalhours, totalmins, timer;
     'backgroundColor' : "#ff0000",
   }, timer);
 
+//notches
+
+if (thehours == '01') {
+    $('.onehour').show();
+    $('.notches').addClass('padding1');
+}
+
+if (thehours == '02') {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.notches').addClass('padding2');
+}
+
+if (thehours == '03') {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show();
+    $('.notches').addClass('padding3');
+}
+
+if (thehours == '04') {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show();
+    $('.fourhours').show();
+    $('.notches').addClass('padding4');
+}
+
+if (thehours == '05') {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show();
+    $('.fourhours').show();
+    $('.fivehours').show();
+    $('.notches').addClass('padding5');
+}
+
+if (thehours == '06') {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show();
+    $('.fourhours').show();
+    $('.fivehours').show();
+    $('.sixhours').show();
+    $('.notches').addClass('padding6');
+}
+
+if (thehours == '07') {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show();
+    $('.fourhours').show();
+    $('.fivehours').show();
+    $('.sixhours').show();
+    $('.sevenhours').show();
+    $('.notches').addClass('padding7');
+}
+
+if (thehours == '08') {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show();
+    $('.fourhours').show();
+    $('.fivehours').show();
+    $('.sixhours').show();
+    $('.sevenhours').show();
+    $('.eighthours').show();
+    $('.notches').addClass('padding8');
+}
+
 
 
 // overtime

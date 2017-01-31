@@ -326,7 +326,7 @@ BURN METER
 
 <span class="time">:</span> 
 
-<input id="mins" type="text" name="minutes" maxlength = "2" style="text-align: left;" value= "00" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onblur="if(this.value == '') { this.value='00'} else if(this.value == '1') { this.value='01'} else if(this.value == '2') { this.value='02'} else if(this.value == '3') { this.value='03'} else if(this.value == '4') { this.value='04'} else if(this.value == '5') { this.value='05'} else if(this.value == '6') { this.value='06'} else if(this.value == '7') { this.value='07'} else if(this.value == '8') { this.value='08'} else if(this.value == '9') { this.value='09'} else if(this.value == '0') { this.value='00'}">
+<input id="mins" type="text" name="minutes" maxlength = "2" style="text-align: left;" value= "00" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onblur="if(this.value == '') { this.value='00'} else if(this.value == '1') { this.value='01'} else if(this.value == '2') { this.value='02'} else if(this.value == '3') { this.value='03'} else if(this.value == '4') { this.value='04'} else if(this.value == '5') { this.value='05'} else if(this.value == '6') { this.value='06'} else if(this.value == '7') { this.value='07'} else if(this.value == '8') { this.value='08'} else if(this.value == '9') { this.value='09'} else if(this.value == '0') { this.value='00'} else if(this.value > 59) { this.value='59'}">
 
 
 </div>
@@ -342,6 +342,67 @@ BURN METER
 Edit Attendees
 </div>
 <div class="totalboom">
+
+<div class="addnotches">
+
+<div class="onehour">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+</div>
+
+<div class="twohours">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+</div>
+
+<div class="threehours">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+</div>
+
+<div class="fourhours">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+</div>
+
+<div class="fivehours">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+</div>
+
+<div class="sixhours">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+</div>
+
+<div class="sevenhours">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+</div>
+
+<div class="eighthours">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+<hr class="notches">
+</div>
+
+
+</div>
 
 <!-- first timer -->
 <div class="ticker">
@@ -372,6 +433,7 @@ Edit Attendees
 <!-- Summary -->
 
 <div class="summary">
+
 
 <h3 class="summaryheadings">Cost</h3>
 <span class="dollar1">$</span><span class="finalcost"></span>
