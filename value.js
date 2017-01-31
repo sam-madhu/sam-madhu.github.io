@@ -651,6 +651,9 @@ result, height, hours, mins, totalhours, totalmins, timer;
 
     // var timediff = timer/9;
 
+    //finesse time input
+
+
 
 //animate counter and hourglass
 
