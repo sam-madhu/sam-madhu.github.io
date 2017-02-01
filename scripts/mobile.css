@@ -460,7 +460,7 @@
 	.ticker{
 	z-index: 5;
     position: absolute;
-/*    display: none;*/
+    display: none;
 	}
 
 	.stop, .restart{
