@@ -1,9 +1,11 @@
-	@font-face {
+		@font-face {
     font-family: MRegular;
     src: url('../assets/MonospaceTypewriter.ttf');
+    font-family: Quicksand;
+    src: url('../assets/Quicksand-Regular.otf');
 	}
 
-	@import url('https://fonts.googleapis.com/css?family=Quicksand');
+	/*@import url('https://fonts.googleapis.com/css?family=Quicksand');*/
 
 
 	*{
