@@ -1,4 +1,10 @@
+	@font-face {
+    font-family: MRegular;
+    src: url('../assets/MonospaceTypewriter.ttf');
+	}
+
 	@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 
 	*{
 		padding: 0;
@@ -93,7 +99,7 @@
 	}
  
 	.seventeen{
-		background-color: #F7D92B;
+		background-color: #F7D228;/*#F7D228;*/
 	}
 
 
@@ -441,7 +447,7 @@
 	.ticker{
 	z-index: 5;
     position: absolute;
-    display: none;
+/*    display: none;*/
 	}
 
 	.stop, .restart{
@@ -514,7 +520,7 @@
 	}
 
 	.time, #hours, #mins{
-		font-size: 80pt;
+		font-size: 20vw;
 		color: #ffffff;
 		background-color: #373737;
 		border: 0px;
@@ -543,4 +549,16 @@
 
 	#splash, .next1, .next2, .stop, .arrow, .open, .close, .add, .minus{
 		cursor: pointer;
+	}
+
+	.null, #hours, #mins, .dollar, .dollar1, .total, .finalcost, .finaltime1, .finaltime2, .dollar2, .burncost, .overcost1, .overcost2, .dollar3, .savecost, .savetime1, .savetime2{
+		font-family: 'MRegular', monospace;
+	}
+
+	.time, .finaltime, .overcost, .savetime{
+		font-family: 'MRegular', monospace;	
+	}
+
+	.null{
+		font-family: 'Quicksand', Arial, sans-serif;
 	}

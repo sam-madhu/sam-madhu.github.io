@@ -535,6 +535,7 @@ var seconds = 0;
 var hourstwo = 0;
 var minstwo = 0;
 var secondstwo = 0;
+var clock = 1;
 
 $('.next2').click(function(){
       startTimer();
@@ -568,7 +569,7 @@ function startTimer(){
      
     
       startTimer();
-  },6); 
+  },clock); 
   // fuck with this to speed time, default is 1000
 }
 
@@ -593,7 +594,7 @@ function startTimerTwo(){
      
     
       startTimerTwo();
-  },6); 
+  },clock); 
   // fuck with this to speed time, default is 1000
 }
 
@@ -645,8 +646,8 @@ result, height, hours, mins, totalhours, totalmins, timer;
     // var totalmins = themins * 60000;
 
     // for testing
-    var totalhours = thehours * 3600;
-    var totalmins = themins * 600;
+    var totalhours = thehours * 120000;
+    var totalmins = themins * 20000;
 
     var timer = totalhours + totalmins;
 
@@ -866,16 +867,16 @@ if (thehours == '04') {
 //     $('.notches').addClass('padding445');
 // }
 
-// //05:00
+//05:00
 
-// if (thehours == '05') {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.notches').addClass('padding5');
-// }
+if (thehours == '05') {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show();
+    $('.fourhours').show();
+    $('.fivehours').show();
+    $('.notches').addClass('padding5');
+}
 
 //05:15
 
@@ -1145,12 +1146,16 @@ if (thehours == '08') {
 
     //saved money and time
 
-    var moneysaved = parseFloat(result - finalcost1).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    // var moneysaved = parseFloat(result - finalcost1).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    var savings = result - parseFloat($("#numbertotal").text().replace(/,/g,''));
+    var moneysaved = parseFloat(savings).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
     $('.savecost').text(moneysaved);
 
     var hourssaved = parseFloat(thehours) - parseFloat(finalhours);
     var minssaved = parseFloat(themins) - parseFloat(finalmins);
+
+    minssaved = Math.abs(minssaved) //remove negatives
 
     $('.savetime1').text(hourssaved);
     $('.savetime2').text(minssaved);
