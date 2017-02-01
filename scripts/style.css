@@ -23,6 +23,10 @@
 	*{
 		padding: 0;
 		margin: 0;
+/*		-webkit-transition: all ease-in-out 0.2s;
+	    -moz-transition: all ease-in-out 0.2s;
+	    -o-transition: all ease-in-out 0.2s;
+	    transition: all ease-in-out 0.2s;*/
 		
 	}
 
@@ -408,6 +412,7 @@
 
 	.totalboom{
 		width: 100vw;
+		padding-top: 35vh;
 		display: none;
 	}
 
@@ -557,7 +562,7 @@
 
 	.fadeout{
     	height: 100px;
-    	padding-top: 20vh;
+    	/*padding-top: 35vh;*/
     	width: 100%;
 	}
 

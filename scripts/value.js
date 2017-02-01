@@ -667,7 +667,8 @@ result, height, hours, mins, totalhours, totalmins, timer;
         duration: timer,
         easing: 'linear',
         complete: function(){
-            $('.fadeout').animate({'opacity': 0.5, 'padding-top': overtimepadding},{duration:500});
+            $('.totalboom').animate({'padding-top': overtimepadding},{duration:500});
+            $('.fadeout').animate({'opacity': 0.5},{duration:500});
             $('.overtime').animate({'opacity': 1},{duration:500});
             startTimerTwo();
         },
