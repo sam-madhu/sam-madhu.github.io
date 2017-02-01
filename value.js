@@ -641,10 +641,11 @@ result, height, hours, mins, totalhours, totalmins, timer;
     var thehours = document.getElementById("hours").value;
     var themins = document.getElementById("mins").value;
 
-    var totalhours = thehours * 3600000;
+    // var totalhours = thehours * 3600000;
     // var totalmins = themins * 60000;
 
     // for testing
+    var totalhours = thehours * 3600;
     var totalmins = themins * 600;
 
     var timer = totalhours + totalmins;
@@ -684,10 +685,64 @@ result, height, hours, mins, totalhours, totalmins, timer;
 
 //notches
 
+//00:15
+
+if (thehours == '00' && themins <= 15 ) {
+    $('.mins15').hide();
+
+}
+
+//00:30
+
+if (thehours == '00' && themins >= 30 && themins < 45 ) {
+    $('.mins15').hide();
+    $('.mins30').show();
+    $('.notches').addClass('padding30');
+}
+
+//00:45
+
+if (thehours == '00' && themins >= 45 ) {
+    $('.mins15').hide();
+    $('.mins45').show();
+    $('.notches').addClass('padding45');
+}
+
+//01:00
+
 if (thehours == '01') {
+    $('.mins15').hide();
     $('.onehour').show();
     $('.notches').addClass('padding1');
 }
+
+//01:15
+
+if (thehours == '01' && themins >= 15 && themins < 30 ) {
+    $('.onehour').show();
+    $('.mins15').show();
+    $('.notches').addClass('padding115');
+}
+
+//01:30
+
+if (thehours == '01' && themins >= 30 && themins < 45 ) {
+    $('.onehour').show();
+    $('.mins15').show();
+    $('.mins30').show();
+    $('.notches').addClass('padding130');
+}
+
+//01:45
+
+if (thehours == '01' && themins >= 45 ) {
+    $('.onehour').show();
+    $('.mins15').show();
+    $('.mins45').show();
+    $('.notches').addClass('padding145');
+}
+
+//02:00
 
 if (thehours == '02') {
     $('.onehour').show();
@@ -695,12 +750,79 @@ if (thehours == '02') {
     $('.notches').addClass('padding2');
 }
 
+//02:15
+
+if (thehours == '02' && themins >= 15 && themins < 30 ) {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.mins15').show();
+    $('.notches').removeClass('padding2');
+    $('.notches').addClass('padding215');
+}
+
+//02:30
+
+if (thehours == '02' && themins >= 30 && themins < 45 ) {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.mins30').show();
+    $('.notches').removeClass('padding2');
+    $('.notches').addClass('padding230');
+}
+
+//02:45
+
+if (thehours == '02' && themins >= 45 ) {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.mins45').show();
+    $('.notches').removeClass('padding2');
+    $('.notches').addClass('padding245');
+}
+
+//03:00
+
 if (thehours == '03') {
     $('.onehour').show();
     $('.twohours').show();
     $('.threehours').show();
+    $('.mins15').hide();
     $('.notches').addClass('padding3');
 }
+
+//03:15
+
+if (thehours == '03' && themins >= 15 && themins < 30 ) {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show();
+    $('.mins15').show();
+    $('.notches').addClass('padding315');
+}
+
+//03:30
+
+if (thehours == '03' && themins >= 30 && themins < 45 ) {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show();
+    $('.mins15').show();
+    $('.mins30').show();
+    $('.notches').addClass('padding330');
+}
+
+//03:45
+
+if (thehours == '03' && themins >= 45 ) {
+    $('.onehour').show();
+    $('.twohours').show();
+    $('.threehours').show()
+    $('.mins15').show();
+    $('.mins45').show();
+    $('.notches').addClass('padding345');
+}
+
+//04:00
 
 if (thehours == '04') {
     $('.onehour').show();
@@ -710,14 +832,89 @@ if (thehours == '04') {
     $('.notches').addClass('padding4');
 }
 
-if (thehours == '05') {
-    $('.onehour').show();
-    $('.twohours').show();
-    $('.threehours').show();
-    $('.fourhours').show();
-    $('.fivehours').show();
-    $('.notches').addClass('padding5');
-}
+
+//04:15
+
+// if (thehours == '04' && themins >= 15 && themins < 30 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.mins15').show();
+//     $('.notches').addClass('padding415');
+// }
+
+//04:30
+
+// if (thehours == '04' && themins >= 30 && themins < 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.mins30').show();
+//     $('.notches').addClass('padding430');
+// }
+
+// //04:45
+
+// if (thehours == '04' && themins >= 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show()
+//     $('.fourhours').show();
+//     $('.mins45').show();
+//     $('.notches').addClass('padding445');
+// }
+
+// //05:00
+
+// if (thehours == '05') {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.notches').addClass('padding5');
+// }
+
+//05:15
+
+// if (thehours == '05' && themins >= 15 && themins < 30 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.mins15').show();
+//     $('.notches').addClass('padding515');
+// }
+
+// //05:30
+
+// if (thehours == '05' && themins >= 30 && themins < 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.mins30').show();
+//     $('.notches').addClass('padding530');
+// }
+
+// //05:45
+
+// if (thehours == '05' && themins >= 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show()
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.mins45').show();
+//     $('.notches').addClass('padding545');
+// }
+
+
+//06:00
 
 if (thehours == '06') {
     $('.onehour').show();
@@ -729,6 +926,47 @@ if (thehours == '06') {
     $('.notches').addClass('padding6');
 }
 
+//06:15
+
+// if (thehours == '06' && themins >= 15 && themins < 30 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.sixhours').show();
+//     $('.mins15').show();
+//     $('.notches').addClass('padding615');
+// }
+
+// //06:30
+
+// if (thehours == '06' && themins >= 30 && themins < 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.sixhours').show();
+//     $('.mins30').show();
+//     $('.notches').addClass('padding630');
+// }
+
+// //06:45
+
+// if (thehours == '06' && themins >= 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show()
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.sixhours').show();
+//     $('.mins45').show();
+//     $('.notches').addClass('padding645');
+// }
+
+//07:00
+
 if (thehours == '07') {
     $('.onehour').show();
     $('.twohours').show();
@@ -739,6 +977,50 @@ if (thehours == '07') {
     $('.sevenhours').show();
     $('.notches').addClass('padding7');
 }
+
+//07:15
+
+// if (thehours == '07' && themins >= 15 && themins < 30 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.sixhours').show();
+//     $('.sevenhours').show();
+//     $('.mins15').show();
+//     $('.notches').addClass('padding715');
+// }
+
+// //07:30
+
+// if (thehours == '07' && themins >= 30 && themins < 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.sixhours').show();
+//     $('.sevenhours').show();
+//     $('.mins30').show();
+//     $('.notches').addClass('padding730');
+// }
+
+// //07:45
+
+// if (thehours == '07' && themins >= 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show()
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.sixhours').show();
+//     $('.sevenhours').show();
+//     $('.mins45').show();
+//     $('.notches').addClass('padding745');
+// }
+
+//08:00
 
 if (thehours == '08') {
     $('.onehour').show();
@@ -752,6 +1034,50 @@ if (thehours == '08') {
     $('.notches').addClass('padding8');
 }
 
+//08:15
+
+// if (thehours == '08' && themins >= 15 && themins < 30 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.sixhours').show();
+//     $('.sevenhours').show();
+//     $('.eighthours').show();
+//     $('.mins15').show();
+//     $('.notches').addClass('padding815');
+// }
+
+// //08:30
+
+// if (thehours == '08' && themins >= 30 && themins < 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show();
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.sixhours').show();
+//     $('.sevenhours').show();
+//     $('.eighthours').show();
+//     $('.mins30').show();
+//     $('.notches').addClass('padding830');
+// }
+
+// //08:45
+
+// if (thehours == '08' && themins >= 45 ) {
+//     $('.onehour').show();
+//     $('.twohours').show();
+//     $('.threehours').show()
+//     $('.fourhours').show();
+//     $('.fivehours').show();
+//     $('.sixhours').show();
+//     $('.sevenhours').show();
+//     $('.eighthours').show();
+//     $('.mins45').show();
+//     $('.notches').addClass('padding845');
+// }
 
 
 // overtime
