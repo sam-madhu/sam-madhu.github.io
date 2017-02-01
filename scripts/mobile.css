@@ -1,7 +1,7 @@
 	@font-face {
     font-family: 'Quicksand';
-    src: url('quicksand-regular-webfont.woff2') format('woff2'),
-         url('quicksand-regular-webfont.woff') format('woff');
+    src: url('../assets/quicksand-regular-webfont.woff2') format('woff2'),
+         url('../assets/quicksand-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
