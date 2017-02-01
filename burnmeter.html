@@ -23,49 +23,49 @@ $(document).ready(function(){
     });
 
     $(".next1").click(function(){
-    	$(this).hide();
-    	$(".header").hide();
-    	$(".start").hide();
-        $(".listitem").hide();
-        $(".settimer").show();
-        $(".arrow").show();
-        $(".next2").show();
-        $(".header2").show();
-        $("#timeline").show();
+    	$(this).fadeOut();
+    	$(".header").fadeOut();
+    	$(".start").fadeOut();
+        $(".listitem").fadeOut();
+        $(".settimer").fadeIn();
+        $(".arrow").fadeIn();
+        $(".next2").fadeIn();
+        $(".header2").fadeIn();
+        $("#timeline").fadeIn();
     });
 
     $(".next2").click(function(){
-    	$(this).hide();
-    	$(".settimer").hide();
-        $(".header2").hide();
-        $(".header3").show();
-    	$(".totalboom").show();
-    	$(".stop").show(); 
+    	$(this).fadeOut();
+    	$(".settimer").fadeOut();
+        $(".header2").fadeOut();
+        $(".header3").fadeIn();
+    	$(".totalboom").fadeIn();
+    	$(".stop").fadeIn(); 
     });
 
     $(".arrow").click(function(){
-        $(this).hide();
-        $(".settimer").hide();
-        $(".header2").hide();
-        $(".header").show();
-        $(".start").show();
-        $(".listitem").show();
-        $(".next1").show();
+        $(this).fadeOut();
+        $(".settimer").fadeOut();
+        $(".header2").fadeOut();
+        $(".header").fadeIn();
+        $(".start").fadeIn();
+        $(".listitem").fadeIn();
+        $(".next1").fadeIn();
     });
 
      $(".open").click(function(){
-        $(this).hide();
-        $(".close").show();
-        $(".listitem").show();
-        $(".totalboom").hide();
+        $(this).fadeOut();
+        $(".close").fadeIn();
+        $(".listitem").fadeIn();
+        $(".totalboom").fadeOut();
         $(".list").addClass("adjustpadding");
     });
 
      $(".close").click(function(){
-        $(this).hide();
-        $(".open").show();
-        $(".listitem").hide();
-        $(".totalboom").show();
+        $(this).fadeOut();
+        $(".open").fadeIn();
+        $(".listitem").fadeOut();
+        $(".totalboom").fadeIn();
     });
 
 
