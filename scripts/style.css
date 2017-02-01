@@ -1,9 +1,21 @@
 	@font-face {
-    font-family: MRegular;
-    src: url('../assets/MonospaceTypewriter.ttf');
     font-family: Quicksand;
     src: url('../assets/Quicksand-Regular.otf');
 	}
+	@font-face {
+    font-family: MRegular;
+    src: url('../assets/MonospaceTypewriter.ttf');
+}
+
+/*@font-face {
+    font-family: 'MRegular';
+    src: url('../assets/monospacetypewriter-webfont.woff2') format('woff2'),
+         url('../assets/monospacetypewriter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
 
 /*	@import url('https://fonts.googleapis.com/css?family=Quicksand');*/
 
@@ -449,7 +461,7 @@
 	.ticker{
 	z-index: 5;
     position: absolute;
-/*    display: none;*/
+    display: none;
 	}
 
 	.stop, .restart{
@@ -545,7 +557,7 @@
 
 	.fadeout{
     	height: 100px;
-    	padding-top: 35vh;
+    	padding-top: 20vh;
     	width: 100%;
 	}
 

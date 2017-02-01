@@ -1,7 +1,11 @@
 	@font-face {
-    font-family: Quicksand;
-    src: url('../assets/Quicksand-Regular.otf');
-	}
+    font-family: 'Quicksand';
+    src: url('quicksand-regular-webfont.woff2') format('woff2'),
+         url('quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 	@font-face {
     font-family: 'MRegular';
     src: url('../assets/monospacetypewriter-webfont.woff2') format('woff2'),
@@ -40,7 +44,7 @@
 		z-index: 1;
 		text-align: center;
 		overflow-y: hidden;
-		padding-top: 45vh;
+		padding-top: 30vh;
 	}
 
 	.one{
@@ -512,7 +516,7 @@
 
 	#timeline{
 		text-align: center;
-		padding-top: 30vh;
+		padding-top: 20vh;
 		display: none;
 		width: 100%;
 	}
