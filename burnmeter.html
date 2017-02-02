@@ -23,60 +23,60 @@ $(document).ready(function(){
     });
 
     $(".next1").click(function(){
-    	$(this).fadeOut();
-    	$(".header").fadeOut();
-    	$(".start").fadeOut();
-        $(".listitem").fadeOut();
-        $(".settimer").fadeIn();
-        $(".arrow").fadeIn();
-        $(".next2").fadeIn();
-        $(".header2").fadeIn();
-        $("#timeline").fadeIn();
+    	$(this).hide();
+    	$(".header").hide();
+    	$(".start").hide();
+        $(".listitem").hide();
+        $(".settimer").show();
+        $(".arrow").show();
+        $(".next2").show();
+        $(".header2").show();
+        $("#timeline").show();
     });
 
     $(".next2").click(function(){
-    	$(this).fadeOut();
-    	$(".settimer").fadeOut();
-        $(".header2").fadeOut();
-        $(".header3").fadeIn();
-    	$(".totalboom").fadeIn();
-    	$(".stop").fadeIn(); 
+    	$(this).hide();
+    	$(".settimer").hide();
+        $(".header2").hide();
+        $(".header3").show();
+    	$(".totalboom").show();
+    	$(".stop").show(); 
     });
 
     $(".arrow").click(function(){
-        $(this).fadeOut();
-        $(".settimer").fadeOut();
-        $(".header2").fadeOut();
-        $(".header").fadeIn();
-        $(".start").fadeIn();
-        $(".listitem").fadeIn();
-        $(".next1").fadeIn();
+        $(this).hide();
+        $(".settimer").hide();
+        $(".header2").hide();
+        $(".header").show();
+        $(".start").show();
+        $(".listitem").show();
+        $(".next1").show();
     });
 
      $(".open").click(function(){
-        $(this).fadeOut();
-        $(".close").fadeIn();
-        $(".listitem").fadeIn();
-        $(".totalboom").fadeOut();
+        $(this).hide();
+        $(".close").show();
+        $(".listitem").show();
+        $(".totalboom").hide();
         $(".list").addClass("adjustpadding");
     });
 
      $(".close").click(function(){
-        $(this).fadeOut();
-        $(".open").fadeIn();
-        $(".listitem").fadeOut();
-        $(".totalboom").fadeIn();
+        $(this).hide();
+        $(".open").show();
+        $(".listitem").hide();
+        $(".totalboom").show();
     });
 
 
 // uncomment this to switch on summary page
 
     $('.stop').click(function(){
-      $(this).delay(600).fadeOut();
-      $(".header3").delay(600).fadeOut();
-      $(".totalboom").delay(600).fadeOut();
-      $(".summary").delay(600).fadeIn();
-      $(".restart").delay(600).fadeIn();
+      $(this).delay(600).hide();
+      $(".header3").delay(600).hide();
+      $(".totalboom").delay(600).hide();
+      $(".summary").delay(600).show();
+      $(".restart").delay(600).show();
 	});
 
 
