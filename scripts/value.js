@@ -535,7 +535,7 @@ var seconds = 0;
 var hourstwo = 0;
 var minstwo = 0;
 var secondstwo = 0;
-var clock = 1;
+var clock = 0.0001; //default 1000
 
 $('.next2').click(function(){
       startTimer();
@@ -646,8 +646,8 @@ result, height, hours, mins, totalhours, totalmins, timer;
     // var totalmins = themins * 60000;
 
     // for testing
-    var totalhours = thehours * 120000;
-    var totalmins = themins * 20000;
+    var totalhours = thehours * 20000;
+    var totalmins = themins * 300;
 
     var timer = totalhours + totalmins;
 
@@ -667,8 +667,7 @@ result, height, hours, mins, totalhours, totalmins, timer;
         duration: timer,
         easing: 'linear',
         complete: function(){
-            $('.totalboom').animate({'padding-top': overtimepadding},{duration:500});
-            $('.fadeout').animate({'opacity': 0.5},{duration:500});
+            $('.fadeout').animate({'opacity': 0.5, 'padding-top': overtimepadding},{duration:500});
             $('.overtime').animate({'opacity': 1},{duration:500});
             startTimerTwo();
         },
@@ -1156,7 +1155,8 @@ if (thehours == '08') {
     var hourssaved = parseFloat(thehours) - parseFloat(finalhours);
     var minssaved = parseFloat(themins) - parseFloat(finalmins);
 
-    minssaved = Math.abs(minssaved) //remove negatives
+    hourssaved = Math.abs(hourssaved);
+    minssaved = Math.abs(minssaved); //remove negatives
 
     $('.savetime1').text(hourssaved);
     $('.savetime2').text(minssaved);

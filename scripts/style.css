@@ -412,7 +412,6 @@
 
 	.totalboom{
 		width: 100vw;
-		padding-top: 35vh;
 		display: none;
 	}
 
@@ -466,7 +465,7 @@
 	.ticker{
 	z-index: 5;
     position: absolute;
-    display: none;
+    /*display: none;*/
 	}
 
 	.stop, .restart{
@@ -562,7 +561,7 @@
 
 	.fadeout{
     	height: 100px;
-    	/*padding-top: 35vh;*/
+    	padding-top: 35vh;
     	width: 100%;
 	}
 
