@@ -15,12 +15,12 @@
 <script>
 $(document).ready(function(){
 
-    // $("#splash").delay(3000).fadeOut();
+    $("#splash").delay(3000).fadeOut();
 
-	$("#splash").click(function(){
-    	$(this).fadeOut();
+	// $("#splash").click(function(){
+ //    	$(this).fadeOut();
 
-    });
+ //    });
 
     $(".next1").click(function(){
     	$(this).hide();
@@ -72,11 +72,11 @@ $(document).ready(function(){
 // uncomment this to switch on summary page
 
     $('.stop').click(function(){
-      $(this).delay(600).hide();
-      $(".header3").delay(600).hide();
-      $(".totalboom").delay(600).hide();
-      $(".summary").delay(600).show();
-      $(".restart").delay(600).show();
+      $(this).delay(1000).hide(0);
+      $(".header3").delay(1000).hide(0);
+      $(".totalboom").delay(1000).hide(0);
+      $(".summary").delay(1000).show(0);
+      $(".restart").delay(1000).show(0);
 	});
 
 
