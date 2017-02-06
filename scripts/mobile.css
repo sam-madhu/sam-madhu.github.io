@@ -1,7 +1,7 @@
 	@font-face {
     font-family: 'Quicksand';
-    src: url('quicksand-regular-webfont.woff2') format('woff2'),
-         url('quicksand-regular-webfont.woff') format('woff');
+    src: url('../assets/quicksand-regular-webfont.woff2') format('woff2'),
+         url('../assets/quicksand-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -139,7 +139,7 @@
 
 	.arrow{
 	width: 20px;
-    margin-left: -130px;
+    margin-left: -115px;
     position: absolute;
     margin-top: 4px;
 	}
@@ -147,14 +147,14 @@
 	.open{
 	width: 16px;
     position: absolute;
-    margin-left: -110px;
+    margin-left: -95px;
     margin-top: 1px;
 	}
 
 	.close{
 	width: 16px;
     position: absolute;
-    margin-left: -105px;
+    margin-left: -95px;
     margin-top: 1px;
     display: none;
 	}
@@ -460,7 +460,7 @@
 	.ticker{
 	z-index: 5;
     position: absolute;
-/*    display: none;*/
+    display: none;
 	}
 
 	.stop, .restart{
