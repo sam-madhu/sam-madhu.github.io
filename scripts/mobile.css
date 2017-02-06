@@ -516,7 +516,7 @@
 
 	#timeline{
 		text-align: center;
-		padding-top: 29vh;
+		padding-top: 24vh;
 		display: none;
 		width: 100%;
 	}
@@ -533,7 +533,7 @@
 	}
 
 	.time, #hours, #mins{
-		font-size: 96px;
+		font-size: 80px;
 		color: #ffffff;
 		background-color: #373737;
 		border: 0px;
