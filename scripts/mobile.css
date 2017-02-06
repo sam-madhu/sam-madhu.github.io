@@ -490,7 +490,7 @@
 
 	.finalcost, .finaltime, .finaltime1, .finaltime2, .burncost, .overcost, .overcost1, .overcost2, 
 	.dollar1, .dollar2, .savecost, .savetime, .savetime1, .savetime2, .dollar3{
-		font-size: 35pt;
+		font-size: 40px;
 	}
 
 	.burncost, .overcost, .overcost1, .overcost2, .dollar2{
