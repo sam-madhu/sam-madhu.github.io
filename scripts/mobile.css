@@ -479,13 +479,14 @@
 	.summary{
 		display: none;
 		text-align: center;
+		margin-top: -10vh;
 		margin-bottom: 10vh;
 	}
 
 	.summaryheadings{
 	font-size: 16px;
-    margin-bottom: 3.5vh;
-    margin-top: 3.5vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
 	}
 
 	.finalcost, .finaltime, .finaltime1, .finaltime2, .burncost, .overcost, .overcost1, .overcost2, 
