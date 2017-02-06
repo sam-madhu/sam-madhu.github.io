@@ -44,7 +44,7 @@
 		z-index: 1;
 		text-align: center;
 		overflow-y: hidden;
-		padding-top: 32vh;
+		padding-top: 43vh;
 	}
 
 	.one{
@@ -516,7 +516,7 @@
 
 	#timeline{
 		text-align: center;
-		padding-top: 20vh;
+		padding-top: 29vh;
 		display: none;
 		width: 100%;
 	}
@@ -533,7 +533,7 @@
 	}
 
 	.time, #hours, #mins{
-		font-size: 20vw;
+		font-size: 96px;
 		color: #ffffff;
 		background-color: #373737;
 		border: 0px;
