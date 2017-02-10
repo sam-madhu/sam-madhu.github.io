@@ -7,21 +7,21 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://bitstorm.org/jquery/color-animation/jquery.animate-colors-min.js"></script>
 
 
-<link rel="stylesheet" href="scripts/mobile.css">
+<link rel="stylesheet" href="scripts/style.css">
 <script>
-	
 $(document).ready(function(){
 
-    $("#splash").delay(3000).fadeOut();
+    // $("#splash").delay(3000).fadeOut();
 
-// 	$("#splash").click(function(){
-//     	$(this).fadeOut();
-
-//     });
+	$("#splash").click(function(){
+    	$(this).fadeOut();
+        hideMinus();
+    });
 
     $(".next1").click(function(){
     	$(this).hide();
@@ -72,7 +72,7 @@ $(document).ready(function(){
 
 // uncomment this to switch on summary page
 
-       $('.stop').click(function(){
+    $('.stop').click(function(){
       $(this).delay(1000).hide(0);
       $(".header3").delay(1000).hide(0);
       $(".totalboom").delay(1000).hide(0);
@@ -146,7 +146,7 @@ BURN METER
 <p class="positiontitle">Executive Vice President</p>
 <input class="add" type="button" onclick="incrementValue1()" value="+"/>
 <input type="text" class="null" id="number1" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue1()" value="-"/>
+<input class="minus minus1" type="button" onclick="decreaseValue1()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -156,7 +156,7 @@ BURN METER
 <p class="positiontitle">Senior Vice President</p>
 <input class="add" type="button" onclick="incrementValue2()" value="+"/>
 <input type="text" class="null" id="number2" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue2()" value="-"/>
+<input class="minus minus2" type="button" onclick="decreaseValue2()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -166,7 +166,7 @@ BURN METER
 <p class="positiontitle">Vice President</p>
 <input class="add" type="button" onclick="incrementValue3()" value="+"/>
 <input type="text" class="null" id="number3" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue3()" value="-"/>
+<input class="minus minus3" type="button" onclick="decreaseValue3()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -176,7 +176,7 @@ BURN METER
 <p class="positiontitle">Executive Creative Director</p>
 <input class="add" type="button" onclick="incrementValue4()" value="+"/>
 <input type="text" class="null" id="number4" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue4()" value="-"/>
+<input class="minus minus4" type="button" onclick="decreaseValue4()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -186,7 +186,7 @@ BURN METER
 <p class="positiontitle">Creative Director</p>
 <input class="add" type="button" onclick="incrementValue5()" value="+"/>
 <input type="text" class="null" id="number5" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue5()" value="-"/>
+<input class="minus minus5" type="button" onclick="decreaseValue5()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -196,7 +196,7 @@ BURN METER
 <p class="positiontitle">Associate Creative Director</p>
 <input class="add" type="button" onclick="incrementValue6()" value="+"/>
 <input type="text" class="null" id="number6" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue6()" value="-"/>
+<input class="minus minus6" type="button" onclick="decreaseValue6()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -206,7 +206,7 @@ BURN METER
 <p class="positiontitle">Senior Account Supervisor</p>
 <input class="add" type="button" onclick="incrementValue7()" value="+"/>
 <input type="text" class="null" id="number7" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue7()" value="-"/>
+<input class="minus minus7" type="button" onclick="decreaseValue7()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -216,7 +216,7 @@ BURN METER
 <p class="positiontitle">Account Supervisor</p>
 <input class="add" type="button" onclick="incrementValue8()" value="+"/>
 <input type="text" class="null" id="number8" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue8()" value="-"/>
+<input class="minus minus8" type="button" onclick="decreaseValue8()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -226,7 +226,7 @@ BURN METER
 <p class="positiontitle">Senior Account Executive</p>
 <input class="add" type="button" onclick="incrementValue9()" value="+"/>
 <input type="text" class="null" id="number9" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue9()" value="-"/>
+<input class="minus minus9" type="button" onclick="decreaseValue9()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -236,7 +236,7 @@ BURN METER
 <p class="positiontitle">Account Executive</p>
 <input class="add" type="button" onclick="incrementValue10()" value="+"/>
 <input type="text" class="null" id="number10" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue10()" value="-"/>
+<input class="minus minus10" type="button" onclick="decreaseValue10()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -246,7 +246,7 @@ BURN METER
 <p class="positiontitle">Associate Account Executive</p>
 <input class="add" type="button" onclick="incrementValue11()" value="+"/>
 <input type="text" class="null" id="number11" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue11()" value="-"/>
+<input class="minus minus11" type="button" onclick="decreaseValue11()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -256,7 +256,7 @@ BURN METER
 <p class="positiontitle">Producer</p>
 <input class="add" type="button" onclick="incrementValue12()" value="+"/>
 <input type="text" class="null" id="number12" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue12()" value="-"/>
+<input class="minus minus12" type="button" onclick="decreaseValue12()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -266,7 +266,7 @@ BURN METER
 <p class="positiontitle">Senior Designer</p>
 <input class="add" type="button" onclick="incrementValue13()" value="+"/>
 <input type="text" class="null" id="number13" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue13()" value="-"/>
+<input class="minus minus13" type="button" onclick="decreaseValue13()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -276,7 +276,7 @@ BURN METER
 <p class="positiontitle">Senior Copywriter</p>
 <input class="add" type="button" onclick="incrementValue14()" value="+"/>
 <input type="text" class="null" id="number14" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue14()" value="-"/>
+<input class="minus minus14" type="button" onclick="decreaseValue14()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -286,7 +286,7 @@ BURN METER
 <p class="positiontitle">Junior Designer</p>
 <input class="add" type="button" onclick="incrementValue15()" value="+"/>
 <input type="text" class="null" id="number15" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue15()" value="-"/>
+<input class="minus minus15" type="button" onclick="decreaseValue15()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -296,7 +296,7 @@ BURN METER
 <p class="positiontitle">Junior Copywriter</p>
 <input class="add" type="button" onclick="incrementValue16()" value="+"/>
 <input type="text" class="null" id="number16" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue16()" value="-"/>
+<input class="minus minus16" type="button" onclick="decreaseValue16()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -306,7 +306,7 @@ BURN METER
 <p class="positiontitle">Intern</p>
 <input class="add" type="button" onclick="incrementValue17()" value="+"/>
 <input type="text" class="null" id="number17" value="0"/>
-<input class="minus" type="button" onclick="decreaseValue17()" value="-"/>
+<input class="minus minus17" type="button" onclick="decreaseValue17()" value="-"/>
 </div> 
 <!-- End List Item -->
 
@@ -326,11 +326,11 @@ BURN METER
 
 
 
-<input id="hours" type="text" name="minutes" maxlength = "2" style="text-align: right;" value= "00" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onblur="if(this.value == '') { this.value='00'} else if(this.value == '1') { this.value='01'} else if(this.value == '2') { this.value='02'} else if(this.value == '3') { this.value='03'} else if(this.value == '4') { this.value='04'} else if(this.value == '5') { this.value='05'} else if(this.value == '6') { this.value='06'} else if(this.value == '7') { this.value='07'} else if(this.value == '8') { this.value='08'} else if(this.value == '0') { this.value='00'} else if(this.value > 8) { this.value='08'}">
+<input id="hours" type="text" name="minutes" maxlength = "2" style="text-align: right;" value= "00" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onfocus="this.value=''" onblur="if(this.value == '') { this.value='00'} else if(this.value == '1') { this.value='01'} else if(this.value == '2') { this.value='02'} else if(this.value == '3') { this.value='03'} else if(this.value == '4') { this.value='04'} else if(this.value == '5') { this.value='05'} else if(this.value == '6') { this.value='06'} else if(this.value == '7') { this.value='07'} else if(this.value == '8') { this.value='08'} else if(this.value == '0') { this.value='00'} else if(this.value > 8) { this.value='08'}">
 
 <span class="time">:</span> 
 
-<input id="mins" type="text" name="minutes" maxlength = "2" style="text-align: left;" value= "00" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onblur="if(this.value == '') { this.value='00'} else if(this.value == '1') { this.value='01'} else if(this.value == '2') { this.value='02'} else if(this.value == '3') { this.value='03'} else if(this.value == '4') { this.value='04'} else if(this.value == '5') { this.value='05'} else if(this.value == '6') { this.value='06'} else if(this.value == '7') { this.value='07'} else if(this.value == '8') { this.value='08'} else if(this.value == '9') { this.value='09'} else if(this.value == '0') { this.value='00'} else if(this.value > 59) { this.value='59'}">
+<input id="mins" type="text" name="minutes" maxlength = "2" style="text-align: left;" value= "00" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onfocus="this.value=''" onblur="if(this.value == '') { this.value='00'} else if(this.value == '1') { this.value='01'} else if(this.value == '2') { this.value='02'} else if(this.value == '3') { this.value='03'} else if(this.value == '4') { this.value='04'} else if(this.value == '5') { this.value='05'} else if(this.value == '6') { this.value='06'} else if(this.value == '7') { this.value='07'} else if(this.value == '8') { this.value='08'} else if(this.value == '9') { this.value='09'} else if(this.value == '0') { this.value='00'} else if(this.value > 59) { this.value='59'}">
 
 
 </div>
