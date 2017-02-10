@@ -1,3 +1,11 @@
+//hide minus
+
+function hideMinus()
+{
+    $('.minus').hide();
+    
+}
+
 //template
 
 function incrementValue()
@@ -32,6 +40,12 @@ function incrementValue1()
     var value = parseInt(document.getElementById('number1').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    //show minus if value is more than 0
+    if (value>0) {
+        $('.minus1').show();
+    }
+
     document.getElementById('number1').value = value;
 
 }
@@ -45,6 +59,12 @@ function decreaseValue1()
       if (value<0) {
         value=0;
     }
+
+    //hide minus if value is zero
+
+    if (value==0) {
+        $('.minus1').hide();
+    }
     
     document.getElementById('number1').value = value;
 
@@ -57,6 +77,11 @@ function incrementValue2()
     var value = parseInt(document.getElementById('number2').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus2').show();
+    }
+
     document.getElementById('number2').value = value;
 }
 
@@ -70,6 +95,12 @@ function decreaseValue2()
         value=0;
     }
 
+
+    if (value==0) {
+        $('.minus2').hide();
+    }
+    
+
     document.getElementById('number2').value = value;
 }
 
@@ -81,6 +112,11 @@ function incrementValue3()
     var value = parseInt(document.getElementById('number3').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus3').show();
+    }
+
     document.getElementById('number3').value = value;
 }
 
@@ -93,6 +129,11 @@ function decreaseValue3()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus3').hide();
+    }
+    
     
     document.getElementById('number3').value = value;
 }
@@ -104,6 +145,11 @@ function incrementValue4()
     var value = parseInt(document.getElementById('number4').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus4').show();
+    }
+
     document.getElementById('number4').value = value;
 }
 
@@ -116,6 +162,11 @@ function decreaseValue4()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus4').hide();
+    }
+    
     
     document.getElementById('number4').value = value;
 }
@@ -128,6 +179,11 @@ function incrementValue5()
     var value = parseInt(document.getElementById('number5').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus5').show();
+    }
+
     document.getElementById('number5').value = value;
 }
 
@@ -140,6 +196,11 @@ function decreaseValue5()
       if (value<0) {
         value++;
     }
+
+    if (value==0) {
+        $('.minus5').hide();
+    }
+    
     
     document.getElementById('number5').value = value;
 }
@@ -152,6 +213,11 @@ function incrementValue6()
     var value = parseInt(document.getElementById('number6').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus6').show();
+    }
+
     document.getElementById('number6').value = value;
 }
 
@@ -164,6 +230,12 @@ function decreaseValue6()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus6').hide();
+    }
+    
+
     document.getElementById('number6').value = value;
 }
 
@@ -174,6 +246,11 @@ function incrementValue7()
     var value = parseInt(document.getElementById('number7').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus7').show();
+    }
+
     document.getElementById('number7').value = value;
 }
 
@@ -186,6 +263,11 @@ function decreaseValue7()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus7').hide();
+    }
+    
     
     document.getElementById('number7').value = value;
 }
@@ -198,6 +280,11 @@ function incrementValue8()
     var value = parseInt(document.getElementById('number8').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus8').show();
+    }
+
     document.getElementById('number8').value = value;
 }
 
@@ -210,6 +297,11 @@ function decreaseValue8()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus8').hide();
+    }
+    
     
     document.getElementById('number8').value = value;
 }
@@ -221,6 +313,11 @@ function incrementValue9()
     var value = parseInt(document.getElementById('number9').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus9').show();
+    }
+
     document.getElementById('number9').value = value;
 }
 
@@ -233,6 +330,11 @@ function decreaseValue9()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus9').hide();
+    }
+    
     
     document.getElementById('number9').value = value;
 }
@@ -244,6 +346,11 @@ function incrementValue10()
     var value = parseInt(document.getElementById('number10').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus10').show();
+    }
+
     document.getElementById('number10').value = value;
 }
 
@@ -256,6 +363,11 @@ function decreaseValue10()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus10').hide();
+    }
+    
     
     document.getElementById('number10').value = value;
 }
@@ -267,6 +379,11 @@ function incrementValue11()
     var value = parseInt(document.getElementById('number11').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus11').show();
+    }
+
     document.getElementById('number11').value = value;
 }
 
@@ -280,6 +397,11 @@ function decreaseValue11()
         value=0;
     }
     
+    if (value==0) {
+        $('.minus11').hide();
+    }
+    
+
     document.getElementById('number11').value = value;
 }
 
@@ -291,6 +413,11 @@ function incrementValue12()
     var value = parseInt(document.getElementById('number12').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus12').show();
+    }
+
     document.getElementById('number12').value = value;
 }
 
@@ -303,6 +430,11 @@ function decreaseValue12()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus12').hide();
+    }
+    
     
     document.getElementById('number12').value = value;
 }
@@ -315,6 +447,11 @@ function incrementValue13()
     var value = parseInt(document.getElementById('number13').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus13').show();
+    }
+
     document.getElementById('number13').value = value;
 }
 
@@ -327,6 +464,11 @@ function decreaseValue13()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus13').hide();
+    }
+    
     
     document.getElementById('number13').value = value;
 }
@@ -338,6 +480,11 @@ function incrementValue14()
     var value = parseInt(document.getElementById('number14').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus14').show();
+    }
+
     document.getElementById('number14').value = value;
 }
 
@@ -350,6 +497,11 @@ function decreaseValue14()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus14').hide();
+    }
+    
     
     document.getElementById('number14').value = value;
 }
@@ -362,6 +514,11 @@ function incrementValue15()
     var value = parseInt(document.getElementById('number15').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus15').show();
+    }
+
     document.getElementById('number15').value = value;
 }
 
@@ -374,6 +531,12 @@ function decreaseValue15()
       if (value<0) {
         value=0;
     }
+
+
+    if (value==0) {
+        $('.minus15').hide();
+    }
+    
     
     document.getElementById('number15').value = value;
 }
@@ -386,6 +549,11 @@ function incrementValue16()
     var value = parseInt(document.getElementById('number16').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus16').show();
+    }
+
     document.getElementById('number16').value = value;
 }
 
@@ -398,6 +566,11 @@ function decreaseValue16()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus16').hide();
+    }
+    
     
     document.getElementById('number16').value = value;
 }
@@ -409,6 +582,11 @@ function incrementValue17()
     var value = parseInt(document.getElementById('number17').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus17').show();
+    }
+
     document.getElementById('number17').value = value;
 }
 
@@ -421,6 +599,11 @@ function decreaseValue17()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus17').hide();
+    }
+    
     
     document.getElementById('number17').value = value;
 }
@@ -433,6 +616,13 @@ function incrementValue18()
     var value = parseInt(document.getElementById('number18').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+
+    if (value>0) {
+        $('.minus18').show();
+    }
+
+
     document.getElementById('number18').value = value;
 }
 
@@ -445,6 +635,11 @@ function decreaseValue18()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus18').hide();
+    }
+    
     
     document.getElementById('number18').value = value;
 }
@@ -456,6 +651,11 @@ function incrementValue19()
     var value = parseInt(document.getElementById('number19').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus19').show();
+    }
+
     document.getElementById('number19').value = value;
 }
 
@@ -468,6 +668,11 @@ function decreaseValue19()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus19').hide();
+    }
+    
     
     document.getElementById('number19').value = value;
 }
@@ -479,6 +684,11 @@ function incrementValue20()
     var value = parseInt(document.getElementById('number20').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
+
+    if (value>0) {
+        $('.minus20').show();
+    }
+
     document.getElementById('number20').value = value;
 }
 
@@ -491,9 +701,16 @@ function decreaseValue20()
       if (value<0) {
         value=0;
     }
+
+    if (value==0) {
+        $('.minus20').hide();
+    }
+    
     
     document.getElementById('number20').value = value;
 }
+
+
 
 
 
