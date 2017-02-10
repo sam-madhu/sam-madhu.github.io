@@ -564,6 +564,7 @@
 	#splash, .next1, .next2, .stop, .arrow, .open, .close, .add, .minus{
 		cursor: pointer;
 	}
+	
 
 	.null, #hours, #mins, .dollar, .dollar1, .total, .finalcost, .finaltime1, .finaltime2, .dollar2, .burncost, .overcost1, .overcost2, .dollar3, .savecost, .savetime1, .savetime2{
 		font-family: 'MRegular', monospace;
@@ -576,3 +577,6 @@
 	.null{
 		font-family: 'Quicksand', Arial, sans-serif;
 	}
+
+	textarea, input, button 
+	{ outline: none; }
