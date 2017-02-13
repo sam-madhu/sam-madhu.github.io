@@ -34,8 +34,7 @@ function Next1()
 
     if (result==0) 
         {
-            // alert("Please add attendees!");
-            alert(result);
+            alert("Please add attendees.");
         }
 
     else {
@@ -799,7 +798,7 @@ function timeZero(){
 
     var timer = totalhours + totalmins;
     if (timer == 0) {
-        alert("poop");
+        alert("Please set the time.");
     }
 
     else {
