@@ -15,33 +15,23 @@
 <link rel="stylesheet" href="scripts/mobile.css">
 <script>
 $(document).ready(function(){
+    $(this).scrollTop(0);
+    $('#container').hide();
 
     // $("#splash").delay(3000).fadeOut();
 
 	$("#splash").click(function(){
     	$(this).fadeOut();
+        $('#container').show();
         hideMinus();
     });
 
     $(".next1").click(function(){
-    	$(this).hide();
-    	$(".header").hide();
-    	$(".start").hide();
-        $(".listitem").hide();
-        $(".settimer").show();
-        $(".arrow").show();
-        $(".next2").show();
-        $(".header2").show();
-        $("#timeline").show();
+    	Next1();
     });
 
     $(".next2").click(function(){
-    	$(this).hide();
-    	$(".settimer").hide();
-        $(".header2").hide();
-        $(".header3").show();
-    	$(".totalboom").show();
-    	$(".stop").show(); 
+        //tbh idk why I even need this function??? things get fucked up if I don't write it tho...
     });
 
     $(".arrow").click(function(){
@@ -79,7 +69,6 @@ $(document).ready(function(){
       $(".summary").delay(1000).show(0);
       $(".restart").delay(1000).show(0);
 	});
-
 
 
 
@@ -335,7 +324,7 @@ BURN METER
 
 </div>
 
-<div class="next2" onclick="findTotal()"> Start </div>
+<div class="next2" onclick="timeZero()"> Start </div>
 
 </div>
 
