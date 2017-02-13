@@ -6,6 +6,53 @@ function hideMinus()
     
 }
 
+function Next1()
+{       
+    var val1, val2, val3, val4, val5, 
+    val6, val7, val8, val9, val10, val11, val12, val13, val14, val15, val16, val17, 
+    result;
+
+    val1 = parseInt(document.getElementById('number1').value, 10)*cost1;
+    val2 = parseInt(document.getElementById("number2").value, 10)*cost2;
+    val3 = parseInt(document.getElementById('number3').value, 10)*cost3;
+    val4 = parseInt(document.getElementById("number4").value, 10)*cost4;
+    val5 = parseInt(document.getElementById('number5').value, 10)*cost5;
+    val6 = parseInt(document.getElementById("number6").value, 10)*cost6;
+    val7 = parseInt(document.getElementById('number7').value, 10)*cost7;
+    val8 = parseInt(document.getElementById("number8").value, 10)*cost8;
+    val9 = parseInt(document.getElementById('number9').value, 10)*cost9;
+    val10 = parseInt(document.getElementById("number10").value, 10)*cost10;
+    val11 = parseInt(document.getElementById('number11').value, 10)*cost11;
+    val12 = parseInt(document.getElementById("number12").value, 10)*cost12;
+    val13 = parseInt(document.getElementById("number13").value, 10)*cost13;
+    val14 = parseInt(document.getElementById("number14").value, 10)*cost14;
+    val15 = parseInt(document.getElementById('number15').value, 10)*cost15;
+    val16 = parseInt(document.getElementById("number16").value, 10)*cost16;
+    val17 = parseInt(document.getElementById("number17").value, 10)*cost17;
+
+    result =  (val1+val2+val3+val4+val5+val6+val7+val8+val9+val10+val11+val12+val13+val14+val15+val16+val17); 
+
+    if (result==0) 
+        {
+            // alert("Please add attendees!");
+            alert(result);
+        }
+
+    else {
+
+        $(".next1").hide();
+        $(".header").hide();
+        $(".start").hide();
+        $(".listitem").hide();
+        $(".settimer").show();
+        $(".arrow").show();
+        $(".next2").show();
+        $(".header2").show();
+        $("#timeline").show();
+    }
+}
+
+
 //template
 
 function incrementValue()
@@ -738,6 +785,34 @@ var cost17 = 80;
 // var cost19 = 200;
 // var cost20 = 120;
 
+function timeZero(){
+    var thehours = document.getElementById("hours").value;
+    var themins = document.getElementById("mins").value;
+
+    // var totalhours = thehours * 3600000;
+    // var totalmins = themins * 60000;
+
+    // for testing
+    
+    var totalhours = thehours * 20000;
+    var totalmins = themins * 300;
+
+    var timer = totalhours + totalmins;
+    if (timer == 0) {
+        alert("poop");
+    }
+
+    else {
+        $(".next2").hide();
+        $(".settimer").hide();
+        $(".header2").hide();
+        $(".header3").show();
+        $(".totalboom").show();
+        $(".stop").show(); 
+        findTotal();
+    }
+
+}
 
 
 function findTotal(){ 
@@ -758,6 +833,18 @@ $('.next2').click(function(){
       startTimer();
 });
 
+    // if (timer == 0) {
+    //     alert("poop");
+    // }
+
+    // else {
+    //     $(".next2").hide();
+    //     $(".settimer").hide();
+    //     $(".header2").hide();
+    //     $(".header3").show();
+    //     $(".totalboom").show();
+    //     $(".stop").show(); 
+    // }
 
 
 $('#reset').click(function(){
@@ -1318,19 +1405,12 @@ if (thehours == '08') {
 
 // if you didnt enter any attendees or time, resort to default timer screen
 
-    if (result == 0) {
-    $('.hourglass').hide();
-    $('#numbertotal').text(0);
-    $('.overtime').hide();
-    $('.fadeout').stop();
- }
-
-    if (timer == 0) {
-    $('.hourglass').hide();
-    $('#numbertotal').text(0);
-    $('.overtime').hide();
-    $('.fadeout').stop();
- }
+ //    if (result == 0) {
+ //    $('.hourglass').hide();
+ //    $('#numbertotal').text(0);
+ //    $('.overtime').hide();
+ //    $('.fadeout').stop();
+ // }
 
 
 // stop counting
@@ -1410,6 +1490,8 @@ if (thehours == '08') {
 });
 
 }
+
+
 
 
 
