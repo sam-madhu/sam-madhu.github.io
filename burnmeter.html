@@ -13,14 +13,38 @@
 
 <link rel="stylesheet" href="scripts/style.css">
 <script>
-$(document).ready(function(){    $(this).scrollTop(0);
+$(document).ready(function(){
+
+    $(this).scrollTop(0);
     $('#container').hide();
+    $(".listitem").hide();
 
     // $("#splash").delay(3000).fadeOut();
 
 	$("#splash").click(function(){
     	$(this).fadeOut();
         $('#container').show();
+        //fadeIn list
+        // $(".listitem").addClass('removemargin');
+        $(".one").fadeIn(100);
+        $(".two").fadeIn(200);
+        $(".three").fadeIn(300);
+        $(".four").fadeIn(400);
+        $(".five").fadeIn(500);
+        $(".six").fadeIn(600);
+        $(".seven").fadeIn(700);
+        $(".eight").fadeIn(800);
+        $(".nine").fadeIn(900);
+        $(".ten").fadeIn(1000);
+        $(".eleven").fadeIn(1100);
+        $(".twelve").fadeIn(1200);
+        $(".thirteen").fadeIn(1300);
+        $(".fourteen").fadeIn(1400);
+        $(".fifteen").fadeIn(1500);
+        $(".sixteen").fadeIn(1600);
+        $(".seventeen").fadeIn(1700);
+
+        //hide minus signs
         hideMinus();
     });
 
@@ -38,16 +62,49 @@ $(document).ready(function(){    $(this).scrollTop(0);
         $(".header2").hide();
         $(".header").show();
         $(".start").show();
-        $(".listitem").show();
+        $(".one").fadeIn(100);
+        $(".two").fadeIn(200);
+        $(".three").fadeIn(300);
+        $(".four").fadeIn(400);
+        $(".five").fadeIn(500);
+        $(".six").fadeIn(600);
+        $(".seven").fadeIn(700);
+        $(".eight").fadeIn(800);
+        $(".nine").fadeIn(900);
+        $(".ten").fadeIn(1000);
+        $(".eleven").fadeIn(1100);
+        $(".twelve").fadeIn(1200);
+        $(".thirteen").fadeIn(1300);
+        $(".fourteen").fadeIn(1400);
+        $(".fifteen").fadeIn(1500);
+        $(".sixteen").fadeIn(1600);
+        $(".seventeen").fadeIn(1700);
         $(".next1").show();
     });
 
      $(".open").click(function(){
         $(this).hide();
         $(".close").show();
-        $(".listitem").show();
+        $(".one").fadeIn(100);
+        $(".two").fadeIn(200);
+        $(".three").fadeIn(300);
+        $(".four").fadeIn(400);
+        $(".five").fadeIn(500);
+        $(".six").fadeIn(600);
+        $(".seven").fadeIn(700);
+        $(".eight").fadeIn(800);
+        $(".nine").fadeIn(900);
+        $(".ten").fadeIn(1000);
+        $(".eleven").fadeIn(1100);
+        $(".twelve").fadeIn(1200);
+        $(".thirteen").fadeIn(1300);
+        $(".fourteen").fadeIn(1400);
+        $(".fifteen").fadeIn(1500);
+        $(".sixteen").fadeIn(1600);
+        $(".seventeen").fadeIn(1700);
         $(".totalboom").hide();
         $(".list").addClass("adjustpadding");
+        $(".fadeout").removeClass("animatetotal");
     });
 
      $(".close").click(function(){
@@ -61,12 +118,18 @@ $(document).ready(function(){    $(this).scrollTop(0);
 // uncomment this to switch on summary page
 
     $('.stop').click(function(){
-      $(this).delay(1000).hide(0);
-      $(".header3").delay(1000).hide(0);
-      $(".totalboom").delay(1000).hide(0);
-      $(".summary").delay(1000).show(0);
-      $(".restart").delay(1000).show(0);
+      $(this).delay(200).fadeOut(100);
+      $(".header3").delay(200).fadeOut(100);
+      $(".totalboom").delay(200).fadeOut(100);
+      $(".summary").delay(300).fadeIn(100);
+      $(".restart").delay(300).fadeIn(100);
 	});
+
+
+
+
+
+
 
 
 var $viewportMeta = $('meta[name="viewport"]');
@@ -433,41 +496,47 @@ Edit Attendees
 
 <div class="summary">
 
-
+<div class="fadeone">
 <h3 class="summaryheadings">Cost</h3>
 <span class="dollar1">$</span><span class="finalcost"></span>
-
 <hr class="divider">
+</div>
 
+<div class="fadetwo">
 <h3 class="summaryheadings">Duration</h3>
 <span class="finaltime1">00</span><span class="finaltime">:</span><span class="finaltime2">00</span>
-
 <hr class="divider">
+</div>
+
 
 <div class="over">
 
+<div class="fadethree">
 <h3 class="summaryheadings">Amount burned</h3>
 <span class="dollar2">$</span><span class="burncost"></span>
-
 <hr class="divider">
+</div>
 
+<div class="fadefour">
 <h3 class="summaryheadings">Overtime</h3>
 <span class="overcost1">00</span><span class="overcost">:</span><span class="overcost2">00</span>
-
+</div>
 
 
 </div>
 
 <div class="save">
 
+<div class="fadefive">
 <h3 class="summaryheadings">Amount saved</h3>
 <span class="dollar3">$</span><span class="savecost"></span>
-
 <hr class="divider">
+</div>
 
-
+<div class="fadesix">
 <h3 class="summaryheadings">Time saved</h3>
 <span class="savetime1">00</span><span class="savetime">:</span><span class="savetime2">00</span>
+</div>
 
 </div>
 
