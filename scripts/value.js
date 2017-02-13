@@ -43,11 +43,12 @@ function Next1()
         $(".header").hide();
         $(".start").hide();
         $(".listitem").hide();
-        $(".settimer").show();
-        $(".arrow").show();
-        $(".next2").show();
-        $(".header2").show();
-        $("#timeline").show();
+        $(".settimer").fadeIn(100);
+        $(".arrow").fadeIn(100);
+        $(".next2").fadeIn(100);
+        $(".header2").fadeIn(100);
+        $("#timeline").fadeIn(500);
+        $("#timeline").addClass('animatetimer');
     }
 }
 
@@ -805,9 +806,10 @@ function timeZero(){
         $(".next2").hide();
         $(".settimer").hide();
         $(".header2").hide();
-        $(".header3").show();
-        $(".totalboom").show();
-        $(".stop").show(); 
+        $(".header3").fadeIn(100);
+        $(".totalboom").fadeIn(500);
+        $(".fadeout").addClass('animatetotal');
+        $(".stop").fadeIn(100); 
         findTotal();
     }
 
@@ -1472,13 +1474,25 @@ if (thehours == '08') {
     if(totalcost1 < result) 
         {
             $('.over').hide();
+            $('.fadethree').hide();
+            $('.fadefour').hide();
             $('.save').show();
+            $(".fadeone").delay(300).fadeIn(100);
+            $(".fadetwo").delay(500).fadeIn(100);
+            $(".fadethree").delay(700).fadeIn(100);
+            $(".fadefour").delay(900).fadeIn(100);
         } 
     
     if(totalcost1 > result) 
         {
             $('.save').hide();
+            $('.fadefive').hide();
+            $('.fadesix').hide();
             $('.over').show();
+            $(".fadeone").delay(300).fadeIn(100);
+            $(".fadetwo").delay(500).fadeIn(100);
+            $(".fadefive").delay(700).fadeIn(100);
+            $(".fadesix").delay(900).fadeIn(100);
         }
 
 

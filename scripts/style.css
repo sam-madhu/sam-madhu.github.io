@@ -371,8 +371,26 @@
 		padding-left: 3%;
 		padding-right: 2%;
 		padding-top: 10px;
-		
+
 	}
+
+	.removemargin{
+		-webkit-animation: marginadd 0.5s linear; /* Safari 4.0 - 8.0 */
+        animation: marginadd 0.5s linear;
+        margin-top: 0px;
+	}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes marginadd {
+    0%   {margin-top: 5px;}
+    100% {margin-top: 0px;}
+}
+
+/* Standard syntax */
+@keyframes marginadd {
+    0%   {margin-top: 5px;}
+    100% {margin-top: 0px;}
+}
 
 	.last{
 		margin-bottom: 80px;
@@ -520,12 +538,65 @@
 		margin-bottom: 2.5vh;
 	}
 
+	.fadeone{
+		-webkit-animation: fade 0.1s linear; /* Safari 4.0 - 8.0 */
+        animation: fade 0.1s linear;
+	}
+
+	.fadetwo{
+		-webkit-animation: fade 0.5s linear; /* Safari 4.0 - 8.0 */
+        animation: fade 0.5s linear;
+	}
+
+	.fadethree, .fadefive{
+		-webkit-animation: fade 1s linear; /* Safari 4.0 - 8.0 */
+        animation: fade 1s linear;
+	}
+
+	.fadefour, .fadesix{
+		-webkit-animation: fade 1.5s linear; /* Safari 4.0 - 8.0 */
+        animation: fade 1.5s linear;
+	}
+
+
+		/* Safari 4.0 - 8.0 */
+		@-webkit-keyframes fade {
+		    0%   {opacity: 0;}
+		    100% {opacity: 1;}
+		}
+
+		/* Standard syntax */
+		@keyframes fade {
+		    0%   {opacity: 0;}
+		    100% {opacity: 1;}
+		}
+
+
+
 	#timeline{
 		text-align: center;
 		padding-top: 30vh;
 		display: none;
 		width: 100%;
 	}
+
+		.animatetimer{
+		-webkit-animation: animatetimer 0.3s linear; /* Safari 4.0 - 8.0 */
+        animation: animatetimer 0.3s linear;
+        padding-top: 30vh;
+	}
+
+		/* Safari 4.0 - 8.0 */
+		@-webkit-keyframes animatetimer {
+		    0%   {padding-top: 35vh;}
+		    100% {padding-top: 30vh;}
+		}
+
+		/* Standard syntax */
+		@keyframes animatetimer {
+		    0%   {padding-top: 35vh;}
+		    100% {padding-top: 30vh;}
+		}
 
 	.bar{
 		font-size: 20pt;
@@ -565,6 +636,25 @@
     	padding-top: 35vh;
     	width: 100%;
 	}
+
+	.animatetotal{
+		-webkit-animation: animatetotal 0.3s linear; /* Safari 4.0 - 8.0 */
+        animation: animatetotal 0.3s linear;
+        padding-top: 35vh;
+	}
+
+			/* Safari 4.0 - 8.0 */
+		@-webkit-keyframes animatetotal {
+		    0%   {padding-top: 40vh;}
+		    100% {padding-top: 35vh;}
+		}
+
+		/* Standard syntax */
+		@keyframes animatetotal {
+		    0%   {padding-top: 40vh;}
+		    100% {padding-top: 35vh;}
+		}
+
 
 	#splash, .next1, .next2, .stop, .arrow, .open, .close, .add, .minus{
 		cursor: pointer;
