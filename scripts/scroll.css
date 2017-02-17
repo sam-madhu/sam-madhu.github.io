@@ -1,10 +1,18 @@
 	@font-face {
-    font-family: Quicksand;
-    src: url('../assets/Quicksand-Regular.otf');
-	}
+    font-family: 'Quicksand';
+    src: url('../assets/quicksand-regular-webfont.woff2') format('woff2'),
+         url('../assets/quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 	@font-face {
-    font-family: MRegular;
-    src: url('../assets/MonospaceTypewriter.ttf');
+    font-family: 'MRegular';
+    src: url('../assets/monospacetypewriter-webfont.woff2') format('woff2'),
+         url('../assets/monospacetypewriter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 /*@font-face {
