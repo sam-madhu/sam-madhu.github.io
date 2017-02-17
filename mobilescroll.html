@@ -7,25 +7,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://bitstorm.org/jquery/color-animation/jquery.animate-colors-min.js"></script>
 
-<script type="text/javascript" src="http://cdn.jtsage.com/datebox/latest/jqm-datebox.core.min.js"></script>
-<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
-<script type="text/javascript" src="http://cdn.jtsage.com/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+<script src="scripts/hammer.min.js"></script>
+<script src="scripts/hammer.fakemultitouch.js"></script>
 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<link rel="stylesheet" type="text/css" href="http://cdn.jtsage.com/datebox/latest/jqm-datebox.min.css">
-<link rel="stylesheet" href="scripts/style.css">
+<link rel="stylesheet" href="scripts/drum.css"></link>
+<script src="scripts/drum.js"></script>
+
+
+<link rel="stylesheet" href="scripts/scroll.css">
+<style type="text/css">
+
+    
+    .inner{
+        width: 42vw;
+        overflow: visible;
+    }
+
+   div.drum-wrapper .inner {
+    position: relative;
+    overflow: visible;
+    cursor: pointer;
+}
+
+    #hours div.drum figure {
+    color: #ffffff;
+    text-align: right;
+    }
+
+    #mins div.drum figure {
+    color: #ffffff;
+    text-align: left;
+    }
+
+
+    div.drum-wrapper div.container, div.drum-wrapper figure {
+    height: 12vh;
+    line-height: 10vh;
+}
+
+.dial{
+    opacity: 0;
+}
+</style>
 <script>
 $(document).ready(function(){
-
-    $('#someinput').datebox({
-    mode: "calbox",
-    afterToday: true,
-    // ...etc...
-});
+   
+    $("#hoursscroll").drum({panelCount: 8});
+    $("#minsscroll").drum({panelCount: 8});
 
     $(this).scrollTop(0);
     $('#container').hide();
@@ -156,7 +187,7 @@ $viewportMeta.attr('content', 'width=device-width,initial-scale=1,maximum-scale=
 </script>
 
 
-<script type="text/javascript" src="scripts/value.js"></script>
+<script type="text/javascript" src="scripts/scrollvalue.js"></script>
 
 
 
@@ -381,14 +412,83 @@ BURN METER
 	
 <div id="timeline">
 
-
-
-<input id="hours" type="text" name="minutes" maxlength = "2" style="text-align: right;" value= "00" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onfocus="this.value=''" onblur="if(this.value == '') { this.value='00'} else if(this.value == '1') { this.value='01'} else if(this.value == '2') { this.value='02'} else if(this.value == '3') { this.value='03'} else if(this.value == '4') { this.value='04'} else if(this.value == '5') { this.value='05'} else if(this.value == '6') { this.value='06'} else if(this.value == '7') { this.value='07'} else if(this.value == '8') { this.value='08'} else if(this.value == '0') { this.value='00'} else if(this.value > 8) { this.value='08'}">
-
-<span class="time">:</span> 
-
-<input id="mins" type="text" name="minutes" maxlength = "2" style="text-align: left;" value= "00" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onfocus="this.value=''" onblur="if(this.value == '') { this.value='00'} else if(this.value == '1') { this.value='01'} else if(this.value == '2') { this.value='02'} else if(this.value == '3') { this.value='03'} else if(this.value == '4') { this.value='04'} else if(this.value == '5') { this.value='05'} else if(this.value == '6') { this.value='06'} else if(this.value == '7') { this.value='07'} else if(this.value == '8') { this.value='08'} else if(this.value == '9') { this.value='09'} else if(this.value == '0') { this.value='00'} else if(this.value > 59) { this.value='59'}">
-
+<div id="hours">
+<select id="hoursscroll">
+    <option value="0">00</option>
+    <option value="1">01</option>
+    <option value="2">02</option>
+    <option value="3">03</option>
+    <option value="4">04</option>
+    <option value="5">05</option>
+    <option value="6">06</option>
+    <option value="7">07</option>
+</select>
+</div>
+<span class="time">:</span>
+<div id="mins">
+<select id="minsscroll">
+    <option value="0">00</option>
+    <option value="1">01</option>
+    <option value="2">02</option>
+    <option value="3">03</option>
+    <option value="4">04</option>
+    <option value="5">05</option>
+    <option value="6">06</option>
+    <option value="7">07</option>
+    <option value="8">08</option>
+    <option value="9">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="51">51</option>
+    <option value="52">52</option>
+    <option value="53">53</option>
+    <option value="54">54</option>
+    <option value="55">55</option>
+    <option value="56">56</option>
+    <option value="57">57</option>
+    <option value="58">58</option>
+    <option value="59">59</option>
+</select>
+</div>
 
 </div>
 
