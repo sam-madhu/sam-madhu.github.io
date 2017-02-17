@@ -47,6 +47,17 @@
 		height: 100%;
 	}
 
+	::-moz-selection { /* Code for Firefox */
+    color: #ffffff;
+    background: rgba(0,0,0,0);
+	}
+
+	::selection {
+    color: #ffffff;
+    background: rgba(0,0,0,0);
+	}
+
+
 	#splash{
 		background-color: #2d2d2d;
 		background-repeat: no-repeat;
