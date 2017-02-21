@@ -154,7 +154,7 @@
 
 	.arrow{
 	width: 20px;
-    margin-left: -130px;
+    margin-left: -100px;
     position: absolute;
     margin-top: 4px;
 	}
@@ -420,20 +420,19 @@
 		width: 10%;
 		color: #ffffff;
 		background-color: transparent;
-		font-size: 20pt;
 		opacity: 0.6;
 		
 	}
 
 	.add, .minus, .null{
 		float: right;
+		font-size: 22px;
 	}
 
 
 	.null {
 		text-align: center;
 		width: 10%;
-		font-size: 20pt;
 		color: white;
 		pointer-events: none;
 		background-color: transparent;
@@ -479,12 +478,11 @@
 
 
 	.positiontitle{
-		width: 65%;
-		padding-top: 1.2vh;
-		float: left;
-		font-size: 14px;
-		opacity: 1;
-		
+	    width: 65%;
+	    padding-top: 1.7vh;
+	    float: left;
+	    font-size: 12px;
+	    opacity: 1;
 	}
 
 
@@ -587,7 +585,7 @@
 
 	#timeline{
 		text-align: center;
-		padding-top: 30vh;
+		padding-top: 22vh;
 		display: none;
 		width: 100%;
 	}
@@ -630,7 +628,7 @@
 	}
 
 	.time{
-		line-height: 21vh;
+		line-height: 25vh;
 	}
 
 	#hours{
@@ -660,7 +658,7 @@
 
 	.fadeout{
     	height: 100px;
-    	padding-top: 35vh;
+    	padding-top: 30vh;
     	width: 100%;
 	}
 
