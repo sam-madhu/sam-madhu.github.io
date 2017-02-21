@@ -517,14 +517,14 @@
 	}
 
 	.summaryheadings{
-	font-size: 16px;
-    margin-bottom: 3.5vh;
-    margin-top: 3.5vh;
+	font-size: 12px;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
 	}
 
 	.finalcost, .finaltime, .finaltime1, .finaltime2, .burncost, .overcost, .overcost1, .overcost2, 
 	.dollar1, .dollar2, .savecost, .savetime, .savetime1, .savetime2, .dollar3{
-		font-size: 35pt;
+		font-size: 30px;
 	}
 
 	.burncost, .overcost, .overcost1, .overcost2, .dollar2{
@@ -534,7 +534,6 @@
 	.savecost, .savetime, .savetime1, .savetime2, .dollar3{
 		color: #00ff00;
 	}
-
 	.dollar1, .dollar2, .dollar3{
 		margin-right: 20px;
 	}
@@ -665,7 +664,7 @@
 	.animatetotal{
 		-webkit-animation: animatetotal 0.3s linear; /* Safari 4.0 - 8.0 */
         animation: animatetotal 0.3s linear;
-        padding-top: 35vh;
+        padding-top: 30vh;
 	}
 
 			/* Safari 4.0 - 8.0 */
