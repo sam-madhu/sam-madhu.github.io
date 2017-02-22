@@ -48,7 +48,7 @@ function Next1()
         $(".next2").fadeIn(100);
         $(".header2").fadeIn(100);
         $("#timeline").fadeIn(500);
-        $("#timeline").addClass('animatetimer');
+     
     }
 }
 
