@@ -67,6 +67,8 @@ $(document).ready(function(){
 	$("#splash").click(function(){
     	$(this).fadeOut();
         $('#pick').fadeIn();
+        selectClient();
+        setCosts();
     });
 
     $(".next0").click(function(){
@@ -212,13 +214,13 @@ BURN METER
 <div id="pick">
 
 <div class="picklist">
-<li class="pickclient">Comcast</li>
+<li class="pickclient client1">Comcast</li>
 <hr class="divideclients1">
-<li class="pickclient">Shire</li>
+<li class="pickclient client2">Shire</li>
 <hr class="divideclients2">
-<li class="pickclient">SculpSure</li>
+<li class="pickclient client3">SculpSure</li>
 <hr class="divideclients3">
-<li class="pickclient">EBay</li>
+<li class="pickclient client4">eBay</li>
 </div>
 
 <div class="next0"> Next </div>

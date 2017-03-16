@@ -6,6 +6,96 @@ function hideMinus()
     
 }
 
+//select client
+
+function selectClient() 
+{
+
+    //hover states
+
+    $(".client1").hover(
+    function(e){ $('.divideclients1').hide();}, // over
+    function(e){ $('.divideclients1').show();}  // out
+    );
+
+    $(".client2").hover(
+    function(e){ $('.divideclients1').hide(); $('.divideclients2').hide();}, // over
+    function(e){ $('.divideclients1').show(); $('.divideclients2').show();}  // out
+    );
+
+     $(".client3").hover(
+    function(e){ $('.divideclients2').hide(); $('.divideclients3').hide();}, // over
+    function(e){ $('.divideclients2').show(); $('.divideclients3').show();}  // out
+    );
+
+    $(".client4").hover(
+    function(e){ $('.divideclients3').hide();}, // over
+    function(e){ $('.divideclients3').show();}  // out
+    );
+
+    //click states 
+
+    $(".client1").click(function(){
+        $(".client2").removeClass('selected');
+        $(".client3").removeClass('selected');
+        $(".client4").removeClass('selected');
+        $(".client2").addClass('unpicked');
+        $(".client3").addClass('unpicked');
+        $(".client4").addClass('unpicked');
+        $('.divideclients1').remove();
+        $('.divideclients2').remove();
+        $('.divideclients3').remove();
+        $(this).removeClass('unpicked');
+        $(this).addClass('selected');
+    });
+
+    $(".client2").click(function(){
+        $(".client1").removeClass('selected');
+        $(".client3").removeClass('selected');
+        $(".client4").removeClass('selected');
+        $(".client1").addClass('unpicked');
+        $(".client3").addClass('unpicked');
+        $(".client4").addClass('unpicked');
+        $('.divideclients1').remove();
+        $('.divideclients2').remove();
+        $('.divideclients3').remove();
+        $(this).removeClass('unpicked');
+        $(this).addClass('selected');
+    });
+
+    $(".client3").click(function(){
+        $(".client2").removeClass('selected');
+        $(".client1").removeClass('selected');
+        $(".client4").removeClass('selected');
+        $(".client2").addClass('unpicked');
+        $(".client1").addClass('unpicked');
+        $(".client4").addClass('unpicked');
+        $('.divideclients1').remove();
+        $('.divideclients2').remove();
+        $('.divideclients3').remove();
+        $(this).removeClass('unpicked');
+        $(this).addClass('selected');
+    });
+
+    $(".client4").click(function(){
+        $(".client2").removeClass('selected');
+        $(".client3").removeClass('selected');
+        $(".client1").removeClass('selected');
+        $(".client2").addClass('unpicked');
+        $(".client3").addClass('unpicked');
+        $(".client1").addClass('unpicked');
+        $('.divideclients1').remove();
+        $('.divideclients2').remove();
+        $('.divideclients3').remove();
+        $(this).removeClass('unpicked');
+        $(this).addClass('selected');
+    });
+
+    
+
+        
+}
+
 function Next1()
 {       
     var val1, val2, val3, val4, val5, 
@@ -763,7 +853,7 @@ function decreaseValue20()
 //define costs
 
 // var cost = 10;
-var cost1 = 350;
+var cost1;
 var cost2 = 350;
 var cost3 = 310;
 var cost4 = 420;
@@ -783,6 +873,101 @@ var cost17 = 80;
 // var cost18 = 500;
 // var cost19 = 200;
 // var cost20 = 120;
+
+function setCosts() 
+{
+
+    //Comcast
+
+    $(".client1").click(function(){
+        cost1 = 420;
+        cost2 = 350;
+        cost3 = 310;
+        cost4 = 420;
+        cost5 = 310;
+        cost6 = 255;
+        cost7 = 255;
+        cost8 = 220;
+        cost9 = 190;
+        cost10 = 175;
+        cost11 = 160;
+        cost12 = 220;
+        cost13 = 190;
+        cost14 = 190;
+        cost15 = 160;
+        cost16 = 160;
+        cost17 = 65;
+    });
+
+    //Shire
+
+    $(".client2").click(function(){
+        cost1 = 370;
+        cost2 = 300;
+        cost3 = 260;
+        cost4 = 370;
+        cost5 = 260;
+        cost6 = 190;
+        cost7 = 190;
+        cost8 = 150;
+        cost9 = 130;
+        cost10 = 100;
+        cost11 = 80;
+        cost12 = 198;
+        cost13 = 130;
+        cost14 = 130;
+        cost15 = 80;
+        cost16 = 80;
+        cost17 = 80;
+    });
+
+    //Sculpsure
+
+    $(".client3").click(function(){
+        cost1 = 350;
+        cost2 = 350;
+        cost3 = 310;
+        cost4 = 420;
+        cost5 = 310;
+        cost6 = 255;
+        cost7 = 255;
+        cost8 = 220;
+        cost9 = 190;
+        cost10 = 175;
+        cost11 = 125;
+        cost12 = 135;
+        cost13 = 100;
+        cost14 = 190;
+        cost15 = 160;
+        cost16 = 160;
+        cost17 = 80;
+    });
+
+    //Ebay
+
+    $(".client4").click(function(){
+        cost1 = 307;
+        cost2 = 249;
+        cost3 = 216;
+        cost4 = 307;
+        cost5 = 216;
+        cost6 = 183;
+        cost7 = 183;
+        cost8 = 158;
+        cost9 = 145;
+        cost10 = 133;
+        cost11 = 125;
+        cost12 = 158;
+        cost13 = 145;
+        cost14 = 145;
+        cost15 = 125;
+        cost16 = 125;
+        cost17 = 80;
+    });
+
+            
+}
+
 
 function timeZero(){
     var thehours = $( "#hoursscroll option:selected" ).val();
