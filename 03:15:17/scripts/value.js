@@ -1755,7 +1755,85 @@ if (thehours == 08) {
 }
 
 
+//variables to port to dashboard / API
+
+function calculateVariables(){
+
+var thehours = $( "#hoursscroll option:selected" ).text();
+var themins = $( "#minsscroll option:selected" ).text();
+val1 = parseInt(document.getElementById('number1').value, 10)*cost1;
+val2 = parseInt(document.getElementById("number2").value, 10)*cost2;
+val3 = parseInt(document.getElementById('number3').value, 10)*cost3;
+val4 = parseInt(document.getElementById("number4").value, 10)*cost4;
+val5 = parseInt(document.getElementById('number5').value, 10)*cost5;
+val6 = parseInt(document.getElementById("number6").value, 10)*cost6;
+val7 = parseInt(document.getElementById('number7').value, 10)*cost7;
+val8 = parseInt(document.getElementById("number8").value, 10)*cost8;
+val9 = parseInt(document.getElementById('number9').value, 10)*cost9;
+val10 = parseInt(document.getElementById("number10").value, 10)*cost10;
+val11 = parseInt(document.getElementById('number11').value, 10)*cost11;
+val12 = parseInt(document.getElementById("number12").value, 10)*cost12;
+val13 = parseInt(document.getElementById("number13").value, 10)*cost13;
+val14 = parseInt(document.getElementById("number14").value, 10)*cost14;
+val15 = parseInt(document.getElementById('number15').value, 10)*cost15;
+val16 = parseInt(document.getElementById("number16").value, 10)*cost16;
+val17 = parseInt(document.getElementById("number17").value, 10)*cost17;
 
 
+
+
+//VALUES FOR DATABASE
+
+var client = $(".selected").text(); //String
+var time_allocated = thehours + ":" + themins; //String
+var time_allocated_hours = Number($( "#hoursscroll option:selected" ).val()); //Number
+var time_allocated_mins = Number($( "#minsscroll option:selected" ).val()); //Number
+var time_start = new Date(); //Date
+var cost_estimated = (val1+val2+val3+val4+val5+val6+val7+val8+val9+val10+val11+val12+val13+val14+val15+val16+val17); //Number
+
+
+
+var over_time; //true or false
+
+var over_cost; //true or false
+// * attendees[]
+//    * role
+//    * team
+//    * time_start
+//    * time_end
+//    * rate
+
+console.log("client", client);
+console.log("time_allocated",  time_allocated);
+console.log("time_allocated_hours", time_allocated_hours);
+console.log("time_allocated_mins", time_allocated_mins);
+console.log("time_start", time_start);
+console.log("cost_estimated", cost_estimated);
+
+
+}
+
+function calculateVariables2(){
+    //Time Elapsed
+
+var timerhours = $( ".hours" ).text();
+var timermins = $( ".mins" ).text();
+
+
+
+
+//VALUES FOR DATABASE
+var time_end = new Date(); //Date
+var time_elapsed = timerhours + ":" + timermins; //String
+var time_elapsed_hours = Number(timerhours); //Number
+var time_elapsed_mins = Number(timermins); //Number
+// var cost_total = $(".finalcost").text(); //Number
+
+console.log("time_end", time_end);
+console.log("time_elapsed", time_elapsed);
+console.log("time_elapsed_hours", time_elapsed_hours);
+console.log("time_elapsed_mins", time_elapsed_mins);
+console.log("cost_total", cost_total);
+}
 
     

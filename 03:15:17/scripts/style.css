@@ -177,12 +177,14 @@
 	}
 
 	.unpicked{
-		opacity: 0.3;
+		opacity: 0.2;
 	}
 
 	.divideclients1, .divideclients2, .divideclients3{
-		border-top: 0.1px solid rgba(255,255,255,0.15);
-		border-bottom: 0;
+		opacity: 0.1;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
 	}
 
 	.arrow{

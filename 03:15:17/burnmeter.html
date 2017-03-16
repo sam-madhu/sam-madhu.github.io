@@ -54,7 +54,8 @@
 </style>
 <script>
 $(document).ready(function(){
-   
+
+
     $("#hoursscroll").drum({panelCount: 8});
     $("#minsscroll").drum({panelCount: 8});
 
@@ -105,6 +106,7 @@ $(document).ready(function(){
 
     $(".next2").click(function(){
         //tbh idk why I even need this function??? things get fucked up if I don't write it tho...
+        calculateVariables();
     });
 
     $(".arrow").click(function(){
@@ -174,6 +176,7 @@ $(document).ready(function(){
       $(".totalboom").delay(200).fadeOut(100);
       $(".summary").delay(300).fadeIn(100);
       $(".restart").delay(300).fadeIn(100);
+      calculateVariables2();
 	});
 
 
