@@ -184,6 +184,7 @@ function incrementValue1()
 
     document.getElementById('number1').value = value;
 
+
 }
 
 function decreaseValue1()
@@ -205,6 +206,8 @@ function decreaseValue1()
     document.getElementById('number1').value = value;
 
 }
+
+
 
 //2
 
@@ -846,16 +849,95 @@ function decreaseValue20()
     document.getElementById('number20').value = value;
 }
 
+// function addTimer()
+// {
+//     //add a timer
+//     $(".one .add").click(function(){
+//         $('.one').append('<span class="addtimer">0</span><br/>').html();     
+//     });
 
-function individualTimer()
+//     $(".next2").click(function(){
+//             $(".add").off(addTimer);
+//     });
+// }
+
+function addTimer1()
 {
-    //when + is pressed, add a new timer 
-    //timer doesn't start until meeting starts
-    //timer values are calculated as hours and then multiplied by the resepcive cost per role
-    $('.add').click(function(){
-        console.log("time started");
+        $(".one").append('<span class="addtimer stoptimer">0</span><br/>').html(); 
+}
+
+function removeTimer1()
+{   
+
+        $('.one .addtimer:last').remove();
+}
+   
+
+function startAllTimers(){
+
+
+  $('.addtimer').prop('Counter',0).animate({
+        Counter: 1000
+    }, {
+        duration: 300000, //default 100 mins = 60000000,
+        easing: 'linear',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
     });
-    //when - is pressed, remove a timer
+    
+}
+
+
+function addNewTimer1()
+{   
+    //add a new timer
+    $(".one .add").click(function(){
+        $('.one').append('<span class="newtimer stoptimer">1000</span><br/>').html();   
+        
+        $('.newtimer:last').prop('Counter',0).animate({
+        Counter: 1000
+    }, {
+        duration: 300000, //default 100 mins = 60000000,
+        easing: 'linear',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+
+    });
+}
+
+function removeNewTimer1()
+{   
+    //add a new timer
+    $(".one .minus").click(function(){  
+        $('.one .stoptimer:last').stop();
+        $('.one .stoptimer:last').removeClass('stoptimer');
+
+    });
+}
+
+
+//convert all spans to numbers
+
+function addAll(){
+
+    //tally first
+    var array1 = [];
+    $(".one span").each(function(index, elem){
+    array1.push(Number($(this).text()));
+    });
+
+    function getSum1(total, array1) {
+    return total + array1;
+}
+    
+    var sum1 = array1.reduce(getSum1) * (cost1/60);
+    console.log("add all", sum1);
+
+    //end tally first
+
 }
 
 
@@ -864,22 +946,22 @@ function individualTimer()
 
 // var cost = 10;
 var cost1;
-var cost2 = 350;
-var cost3 = 310;
-var cost4 = 420;
-var cost5 = 310;
-var cost6 = 255;
-var cost7 = 255;
-var cost8 = 220;
-var cost9 = 190;
-var cost10 = 175;
-var cost11 = 160;
-var cost12 = 220;
-var cost13 = 190;
-var cost14 = 190;
-var cost15 = 160;
-var cost16 = 160;
-var cost17 = 80;
+var cost2;
+var cost3;
+var cost4;
+var cost5;
+var cost6;
+var cost7;
+var cost8;
+var cost9;
+var cost10;
+var cost11;
+var cost12;
+var cost13;
+var cost14;
+var cost15;
+var cost16;
+var cost17;
 // var cost18 = 500;
 // var cost19 = 200;
 // var cost20 = 120;

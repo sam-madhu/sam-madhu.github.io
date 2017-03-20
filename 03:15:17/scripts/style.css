@@ -159,6 +159,10 @@
 	}
 
 
+	.addtimer, .newtimer, .backup{
+		font-size: 10pt;
+	}
+
 	.pickclient{
 		list-style-type: none;
 		cursor: pointer;

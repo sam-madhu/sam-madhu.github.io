@@ -98,16 +98,24 @@ $(document).ready(function(){
 
         //hide minus signs
         hideMinus();
-        individualTimer();
     });
+
+    //adding and removing individual timers
+    $(".one .add").on("click", addTimer1);
+    $(".one .minus").on("click", removeTimer1);
+ 
 
     $(".next1").click(function(){
     	Next1();
     });
 
     $(".next2").click(function(){
-        //tbh idk why I even need this function??? things get fucked up if I don't write it tho...
         calculateVariables();
+        startAllTimers();
+        $(".one .add").off("click", addTimer1);
+        $(".one .minus").off("click", removeTimer1);
+        addNewTimer1();
+        removeNewTimer1();
     });
 
     $(".arrow").click(function(){
@@ -177,7 +185,11 @@ $(document).ready(function(){
       $(".totalboom").delay(200).fadeOut(100);
       $(".summary").delay(300).fadeIn(100);
       $(".restart").delay(300).fadeIn(100);
+      $('.addtimer').stop();
+      $('.newtimer').stop();
+      $('.stoptimer').stop();
       calculateVariables2();
+      addAll();
 	});
 
 
@@ -260,6 +272,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem one">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Executive Vice President</p>
 <input class="add" type="button" onclick="incrementValue1()" value="+"/>
 <input type="text" class="null" id="number1" value="0"/>
