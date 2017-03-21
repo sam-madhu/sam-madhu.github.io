@@ -56,6 +56,7 @@
 $(document).ready(function(){
 
 
+
     $("#hoursscroll").drum({panelCount: 8});
     $("#minsscroll").drum({panelCount: 8});
 
@@ -98,11 +99,44 @@ $(document).ready(function(){
 
         //hide minus signs
         hideMinus();
+        attendeesArray();
     });
 
     //adding and removing individual timers
     $(".one .add").on("click", addTimer1);
     $(".one .minus").on("click", removeTimer1);
+    $(".two .add").on("click", addTimer2);
+    $(".two .minus").on("click", removeTimer2);
+    $(".three .add").on("click", addTimer3);
+    $(".three .minus").on("click", removeTimer3);
+    $(".four .add").on("click", addTimer4);
+    $(".four .minus").on("click", removeTimer4);
+    $(".five .add").on("click", addTimer5);
+    $(".five .minus").on("click", removeTimer5);
+    $(".six .add").on("click", addTimer6);
+    $(".six .minus").on("click", removeTimer6);
+    $(".seven .add").on("click", addTimer7);
+    $(".seven .minus").on("click", removeTimer7);
+    $(".eight .add").on("click", addTimer8);
+    $(".eight .minus").on("click", removeTimer8);
+    $(".nine .add").on("click", addTimer9);
+    $(".nine .minus").on("click", removeTimer9);
+    $(".ten .add").on("click", addTimer10);
+    $(".ten .minus").on("click", removeTimer10);
+    $(".eleven .add").on("click", addTimer11);
+    $(".eleven .minus").on("click", removeTimer11);
+    $(".twelve .add").on("click", addTimer12);
+    $(".twelve .minus").on("click", removeTimer12);
+    $(".thirteen .add").on("click", addTimer13);
+    $(".thirteen .minus").on("click", removeTimer13);
+    $(".fourteen .add").on("click", addTimer14);
+    $(".fourteen .minus").on("click", removeTimer14);
+    $(".fifteen .add").on("click", addTimer15);
+    $(".fifteen .minus").on("click", removeTimer15);
+    $(".sixteen .add").on("click", addTimer16);
+    $(".sixteen .minus").on("click", removeTimer16);
+    $(".seventeen .add").on("click", addTimer17);
+    $(".seventeen .minus").on("click", removeTimer17);
  
 
     $(".next1").click(function(){
@@ -114,8 +148,40 @@ $(document).ready(function(){
         startAllTimers();
         $(".one .add").off("click", addTimer1);
         $(".one .minus").off("click", removeTimer1);
-        addNewTimer1();
-        removeNewTimer1();
+        $(".two .add").off("click", addTimer2);
+        $(".two .minus").off("click", removeTimer2);
+        $(".three .add").off("click", addTimer3);
+        $(".three .minus").off("click", removeTimer3);
+        $(".four .add").off("click", addTimer4);
+        $(".four .minus").off("click", removeTimer4);
+        $(".five .add").off("click", addTimer5);
+        $(".five .minus").off("click", removeTimer5);
+        $(".six .add").off("click", addTimer6);
+        $(".six .minus").off("click", removeTimer6);
+        $(".seven .add").off("click", addTimer7);
+        $(".seven .minus").off("click", removeTimer7);
+        $(".eight .add").off("click", addTimer8);
+        $(".eight .minus").off("click", removeTimer8);
+        $(".nine .add").off("click", addTimer9);
+        $(".nine .minus").off("click", removeTimer9);
+        $(".ten .add").off("click", addTimer10);
+        $(".ten .minus").off("click", removeTimer10);
+        $(".eleven .add").off("click", addTimer11);
+        $(".eleven .minus").off("click", removeTimer11);
+        $(".twelve .add").off("click", addTimer12);
+        $(".twelve .minus").off("click", removeTimer12);
+        $(".thirteen .add").off("click", addTimer13);
+        $(".thirteen .minus").off("click", removeTimer13);
+        $(".fourteen .add").off("click", addTimer14);
+        $(".fourteen .minus").off("click", removeTimer14);
+        $(".fifteen .add").off("click", addTimer15);
+        $(".fifteen .minus").off("click", removeTimer15);
+        $(".sixteen .add").off("click", addTimer16);
+        $(".sixteen .minus").off("click", removeTimer16);
+        $(".seventeen .add").off("click", addTimer17);
+        $(".seventeen .minus").off("click", removeTimer17);
+        addNewTimer();
+        removeNewTimer();
     });
 
     $(".arrow").click(function(){
@@ -283,6 +349,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem two">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Senior Vice President</p>
 <input class="add" type="button" onclick="incrementValue2()" value="+"/>
 <input type="text" class="null" id="number2" value="0"/>
@@ -293,6 +360,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem three">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Vice President</p>
 <input class="add" type="button" onclick="incrementValue3()" value="+"/>
 <input type="text" class="null" id="number3" value="0"/>
@@ -303,6 +371,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem four">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Executive Creative Director</p>
 <input class="add" type="button" onclick="incrementValue4()" value="+"/>
 <input type="text" class="null" id="number4" value="0"/>
@@ -313,6 +382,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem five">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Creative Director</p>
 <input class="add" type="button" onclick="incrementValue5()" value="+"/>
 <input type="text" class="null" id="number5" value="0"/>
@@ -323,6 +393,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem six">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Associate Creative Director</p>
 <input class="add" type="button" onclick="incrementValue6()" value="+"/>
 <input type="text" class="null" id="number6" value="0"/>
@@ -333,6 +404,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem seven">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Senior Account Supervisor</p>
 <input class="add" type="button" onclick="incrementValue7()" value="+"/>
 <input type="text" class="null" id="number7" value="0"/>
@@ -343,6 +415,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem eight">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Account Supervisor</p>
 <input class="add" type="button" onclick="incrementValue8()" value="+"/>
 <input type="text" class="null" id="number8" value="0"/>
@@ -353,6 +426,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem nine">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Senior Account Executive</p>
 <input class="add" type="button" onclick="incrementValue9()" value="+"/>
 <input type="text" class="null" id="number9" value="0"/>
@@ -363,6 +437,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem ten">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Account Executive</p>
 <input class="add" type="button" onclick="incrementValue10()" value="+"/>
 <input type="text" class="null" id="number10" value="0"/>
@@ -373,6 +448,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem eleven">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Associate Account Executive</p>
 <input class="add" type="button" onclick="incrementValue11()" value="+"/>
 <input type="text" class="null" id="number11" value="0"/>
@@ -383,6 +459,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem twelve">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Producer</p>
 <input class="add" type="button" onclick="incrementValue12()" value="+"/>
 <input type="text" class="null" id="number12" value="0"/>
@@ -393,6 +470,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem thirteen">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Senior Designer</p>
 <input class="add" type="button" onclick="incrementValue13()" value="+"/>
 <input type="text" class="null" id="number13" value="0"/>
@@ -403,6 +481,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem fourteen">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Senior Copywriter</p>
 <input class="add" type="button" onclick="incrementValue14()" value="+"/>
 <input type="text" class="null" id="number14" value="0"/>
@@ -413,6 +492,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem fifteen">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Junior Designer</p>
 <input class="add" type="button" onclick="incrementValue15()" value="+"/>
 <input type="text" class="null" id="number15" value="0"/>
@@ -423,6 +503,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem sixteen">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Junior Copywriter</p>
 <input class="add" type="button" onclick="incrementValue16()" value="+"/>
 <input type="text" class="null" id="number16" value="0"/>
@@ -433,6 +514,7 @@ BURN METER
 <!-- Account List Item -->
 
 <div class="listitem seventeen">
+<span class="backup">0</span> <!-- this span is a backup in case no users of this group are added to the tally, so the tally calculates as zero and doesn't screw up the total -->
 <p class="positiontitle">Intern</p>
 <input class="add" type="button" onclick="incrementValue17()" value="+"/>
 <input type="text" class="null" id="number17" value="0"/>
