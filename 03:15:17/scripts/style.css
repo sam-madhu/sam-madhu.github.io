@@ -49,7 +49,7 @@
     background: rgba(0,0,0,0);
 	}
 
-	#splash, #pick{
+	#splash, #pick, #email, #ready{
 		background-color: #2d2d2d;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -61,12 +61,39 @@
 		padding-top: 45vh;
 	}
 
-	#pick{
+	#pick, #email, #ready{
 		background-color: #373737;
 		display: none;
 		padding-top: 0;
 	}
 
+	#email{
+		padding-top: 40vh;
+	}
+
+	.enteremail{
+		font-family: 'Quicksand', Arial, sans-serif;
+		border: 0;
+		background-color: #373737;
+		color: #ffffff;
+		border-bottom: 0.5px solid white;
+		padding-bottom: 10px;
+		width: 300px;
+		font-size: 14pt;
+		text-align: left;
+	}
+
+	#ready p{
+		font-size: 20pt;
+    	text-align: center;
+    	padding-top: 30vh;
+    	width: 80vw;
+    	margin-left: 10vw;
+    	color: rgba(255,255,255,0.6);
+	}
+
+	.readyattendees, .readyhours, .readymins{
+		color: rgba(255,255,255,1);	}
 
 	.one{
 		background-color: #EA0707;
@@ -159,7 +186,7 @@
 	}
 
 
-	.addtimer, .newtimer, .backup{
+	.addtimer, .newtimer, .backup, .role, .team, .rate, .time_start, .time_start_perc, .time_end, .time_end_perc{
 		font-size: 10pt;
 		display: none;
 	}
@@ -194,7 +221,7 @@
 
 	.arrow{
 	width: 20px;
-    margin-left: -130px;
+    margin-left: -90px;
     position: absolute;
     margin-top: 4px;
 	}
@@ -392,7 +419,7 @@
 		opacity: 1;
 	}
 
-	.next0, .next1, .next2{
+	.next0, .next1, .next2, .startadding, .areyouready{
 		width: 100%;
 		background-color: #2d2d2d;
 		padding-top: 20px;
@@ -403,6 +430,10 @@
 		text-align: center;
 		position: fixed;
 		cursor: pointer;
+	}
+
+	.startadding, .areyouready{
+		display: none;
 	}
 
 

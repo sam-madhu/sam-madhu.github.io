@@ -1,3 +1,18 @@
+
+
+//GLOBAL VARS 
+
+var client;
+var time_allocated;
+var time_elapsed;
+var time_start;
+var time_end;
+var cost_estimated;
+var cost_total;
+var over_time;
+var over_cost;
+
+
 //hide minus
 
 function hideMinus()
@@ -96,6 +111,21 @@ function selectClient()
         
 }
 
+function saveEmail(){
+    user_email = $(".enteremail").val();
+
+    if (user_email == "") {    
+    alert("Please enter an email address");
+    
+    } else {
+        $('.enteremail').fadeOut();
+        $('#email').fadeOut();
+        $('.clientheader').show();
+        $('#pick').fadeIn();
+        console.log(user_email);
+    }
+}
+
 function Next1()
 {       
     var val1, val2, val3, val4, val5, 
@@ -135,12 +165,41 @@ function Next1()
         $(".listitem").hide();
         $(".settimer").fadeIn(100);
         $(".arrow").fadeIn(100);
-        $(".next2").fadeIn(100);
+        $(".areyouready").fadeIn(100);
         $(".header2").fadeIn(100);
         $("#timeline").fadeIn(500);
     }
 }
 
+function getReady() {
+
+    var thehours = $( "#hoursscroll option:selected" ).val();
+    var themins = $( "#minsscroll option:selected" ).val();
+
+    // var totalhours = thehours * 3600000;
+    // var totalmins = themins * 60000;
+
+    // for testing
+    
+
+    var timer = thehours + themins;
+    if (timer == 0)  {
+        alert("Please set the time.");
+    } 
+
+    else {
+
+    $(this).hide();
+    $(".header2").hide();
+    $(".areyouready").hide();
+    $(".settime").hide();
+    $("#timeline").hide();
+    $(".next2").fadeIn(500);
+    $("#ready").fadeIn(100);
+    
+
+    }
+}
 
 //template
 
@@ -849,17 +908,41 @@ function decreaseValue20()
     document.getElementById('number20').value = value;
 }
 
-// function addTimer()
-// {
-//     //add a timer
-//     $(".one .add").click(function(){
-//         $('.one').append('<span class="addtimer">0</span><br/>').html();     
-//     });
+function summaryCalculate(){
+    var val1, val2, val3, val4, val5, 
+    val6, val7, val8, val9, val10, val11, val12, val13, val14, val15, val16, val17, 
+    result;
 
-//     $(".next2").click(function(){
-//             $(".add").off(addTimer);
-//     });
-// }
+    val1 = parseInt(document.getElementById('number1').value, 10)
+    val2 = parseInt(document.getElementById("number2").value, 10)
+    val3 = parseInt(document.getElementById('number3').value, 10)
+    val4 = parseInt(document.getElementById("number4").value, 10)
+    val5 = parseInt(document.getElementById('number5').value, 10)
+    val6 = parseInt(document.getElementById("number6").value, 10)
+    val7 = parseInt(document.getElementById('number7').value, 10)
+    val8 = parseInt(document.getElementById("number8").value, 10)
+    val9 = parseInt(document.getElementById('number9').value, 10)
+    val10 = parseInt(document.getElementById("number10").value, 10)
+    val11 = parseInt(document.getElementById('number11').value, 10)
+    val12 = parseInt(document.getElementById("number12").value, 10)
+    val13 = parseInt(document.getElementById("number13").value, 10)
+    val14 = parseInt(document.getElementById("number14").value, 10)
+    val15 = parseInt(document.getElementById('number15').value, 10)
+    val16 = parseInt(document.getElementById("number16").value, 10)
+    val17 = parseInt(document.getElementById("number17").value, 10)
+
+    result =  (val1+val2+val3+val4+val5+val6+val7+val8+val9+val10+val11+val12+val13+val14+val15+val16+val17); 
+
+    console.log(result);
+
+    var hours = $( "#hoursscroll option:selected" ).val();
+    var mins = $( "#minsscroll option:selected" ).val();
+
+    $(".readyattendees").text(result); 
+    $(".readyhours").text(hours); 
+    $(".readymins").text(mins); 
+
+}
 
 function addTimer1()
 {
@@ -1081,8 +1164,9 @@ function addNewTimer()
         step: function (now) {
             $(this).text(Math.ceil(now));
         }
+
     });
-        
+
     });
 
     //end
@@ -1501,6 +1585,130 @@ function removeNewTimer()
     });
 }
 
+//Recording time
+
+var time_start_perc;
+var time_end_perc;
+
+var team1 = "Account";
+var team2 = "Creative";
+var team3 = "Delivery";
+
+var attendees=[];
+
+function recordTime(){
+
+//push array
+    attendees1 = {
+            role: $(".one .positiontitle").text(),
+            team: team1,
+            rate: cost1,
+            time_start,
+            time_end,
+            time_start_perc,
+            time_end_perc
+        }
+
+    $(".one .add").click(function(){  
+    
+        //record start time
+
+        attendees1.time_start = new Date();
+        attendees1.time_start_perc = Number($(".one .stoptimer:first").text())/60;
+    });
+
+    $(".one .minus").click(function(){  
+    
+        //record end time
+
+        attendees1.time_end = new Date();
+        attendees1.time_end_perc = Number($(".one .stoptimer:first").text())/60;
+        attendees.push(attendees1);
+        console.log(attendees);
+
+    });
+//end
+
+//push array
+    attendees2 = {
+            role: $(".two .positiontitle").text(),
+            team: team1,
+            rate: cost2,
+            time_start,
+            time_end,
+            time_start_perc,
+            time_end_perc
+        }
+
+    $(".two .add").click(function(){  
+    
+        //record start time
+
+        attendees2.time_start = new Date();
+        attendees2.time_start_perc = Number($(".two .stoptimer:first").text())/60;
+    });
+
+    $(".two .minus").click(function(){  
+    
+        //record end time
+
+        attendees2.time_end = new Date();
+        attendees2.time_end_perc = Number($(".two .stoptimer:first").text())/60;
+        attendees.push(attendees2);
+        console.log(attendees);
+
+    });
+//end
+
+//push array
+    attendees3 = {
+            role: $(".three .positiontitle").text(),
+            team: team1,
+            rate: cost3,
+            time_start,
+            time_end,
+            time_start_perc,
+            time_end_perc
+        }
+
+    $(".three .add").click(function(){  
+    
+        //record start time
+
+        attendees3.time_start = new Date();
+        attendees3.time_start_perc = Number($(".three .stoptimer:first").text())/60;
+    });
+
+    $(".three .minus").click(function(){  
+    
+        //record end time
+
+        attendees3.time_end = new Date();
+        attendees3.time_end_perc = Number($(".three .stoptimer:first").text())/60;
+        attendees.push(attendees3);
+        console.log(attendees);
+
+    });
+//end
+
+    $(".stop").click(function(){  
+    
+        //add values of remaining attendees and push to array
+        attendees1.time_end = new Date();
+        attendees1.time_end_perc = Number($(".one .stoptimer:first").text())/60;
+        
+        var remaining_attendees1 = $("#number1").val();
+        
+        for (var i=0; i<remaining_attendees1; ++i ){
+        attendees.push(attendees1);
+        }
+
+        console.log(attendees);
+
+    });
+
+}
+
 
 //convert all spans to numbers
 
@@ -1723,9 +1931,6 @@ var cost14;
 var cost15;
 var cost16;
 var cost17;
-// var cost18 = 500;
-// var cost19 = 200;
-// var cost20 = 120;
 
 function setCosts() 
 {
@@ -1823,30 +2028,16 @@ function setCosts()
 
 
 function timeZero(){
-    var thehours = $( "#hoursscroll option:selected" ).val();
-    var themins = $( "#minsscroll option:selected" ).val();
-
-    // var totalhours = thehours * 3600000;
-    // var totalmins = themins * 60000;
-
-    // for testing
     
-
-    var timer = thehours + themins;
-    if (timer == 0) {
-        alert("Please set the time.");
-    } 
-
-    else {
         $(".next2").hide();
-        $(".settimer").hide();
-        $(".header2").hide();
+        $(".areyouready").hide();
+        $("#ready").hide();
         $(".header3").fadeIn(100);
         $(".totalboom").fadeIn(500);
         $(".fadeout").addClass('animatetotal');
         $(".stop").fadeIn(100); 
         findTotal();
-    }
+    
 
 }
 
@@ -2242,39 +2433,6 @@ if (thehours == 04) {
 }
 
 
-//04:15
-
-// if (thehours == '04' && themins >= 15 && themins < 30 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.mins15').show();
-//     $('.notches').addClass('padding415');
-// }
-
-//04:30
-
-// if (thehours == '04' && themins >= 30 && themins < 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.mins30').show();
-//     $('.notches').addClass('padding430');
-// }
-
-// //04:45
-
-// if (thehours == '04' && themins >= 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show()
-//     $('.fourhours').show();
-//     $('.mins45').show();
-//     $('.notches').addClass('padding445');
-// }
-
 //05:00
 
 if (thehours == 05) {
@@ -2286,41 +2444,6 @@ if (thehours == 05) {
     $('.notches').addClass('padding5');
 }
 
-//05:15
-
-// if (thehours == '05' && themins >= 15 && themins < 30 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.mins15').show();
-//     $('.notches').addClass('padding515');
-// }
-
-// //05:30
-
-// if (thehours == '05' && themins >= 30 && themins < 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.mins30').show();
-//     $('.notches').addClass('padding530');
-// }
-
-// //05:45
-
-// if (thehours == '05' && themins >= 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show()
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.mins45').show();
-//     $('.notches').addClass('padding545');
-// }
 
 
 //06:00
@@ -2335,44 +2458,7 @@ if (thehours == 06) {
     $('.notches').addClass('padding6');
 }
 
-//06:15
 
-// if (thehours == '06' && themins >= 15 && themins < 30 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.sixhours').show();
-//     $('.mins15').show();
-//     $('.notches').addClass('padding615');
-// }
-
-// //06:30
-
-// if (thehours == '06' && themins >= 30 && themins < 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.sixhours').show();
-//     $('.mins30').show();
-//     $('.notches').addClass('padding630');
-// }
-
-// //06:45
-
-// if (thehours == '06' && themins >= 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show()
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.sixhours').show();
-//     $('.mins45').show();
-//     $('.notches').addClass('padding645');
-// }
 
 //07:00
 
@@ -2387,47 +2473,7 @@ if (thehours == 07) {
     $('.notches').addClass('padding7');
 }
 
-//07:15
 
-// if (thehours == '07' && themins >= 15 && themins < 30 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.sixhours').show();
-//     $('.sevenhours').show();
-//     $('.mins15').show();
-//     $('.notches').addClass('padding715');
-// }
-
-// //07:30
-
-// if (thehours == '07' && themins >= 30 && themins < 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.sixhours').show();
-//     $('.sevenhours').show();
-//     $('.mins30').show();
-//     $('.notches').addClass('padding730');
-// }
-
-// //07:45
-
-// if (thehours == '07' && themins >= 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show()
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.sixhours').show();
-//     $('.sevenhours').show();
-//     $('.mins45').show();
-//     $('.notches').addClass('padding745');
-// }
 
 //08:00
 
@@ -2443,50 +2489,6 @@ if (thehours == 08) {
     $('.notches').addClass('padding8');
 }
 
-//08:15
-
-// if (thehours == '08' && themins >= 15 && themins < 30 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.sixhours').show();
-//     $('.sevenhours').show();
-//     $('.eighthours').show();
-//     $('.mins15').show();
-//     $('.notches').addClass('padding815');
-// }
-
-// //08:30
-
-// if (thehours == '08' && themins >= 30 && themins < 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show();
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.sixhours').show();
-//     $('.sevenhours').show();
-//     $('.eighthours').show();
-//     $('.mins30').show();
-//     $('.notches').addClass('padding830');
-// }
-
-// //08:45
-
-// if (thehours == '08' && themins >= 45 ) {
-//     $('.onehour').show();
-//     $('.twohours').show();
-//     $('.threehours').show()
-//     $('.fourhours').show();
-//     $('.fivehours').show();
-//     $('.sixhours').show();
-//     $('.sevenhours').show();
-//     $('.eighthours').show();
-//     $('.mins45').show();
-//     $('.notches').addClass('padding845');
-// }
 
 
 // overtime
@@ -2537,8 +2539,8 @@ if (thehours == 08) {
     //VARIABLES FOR DATABASE
 
 
-    var cost_total = totalcost1;
-    console.log("cost_total", cost_total);
+    cost_total = totalcost1;
+    // console.log("cost_total", cost_total);
 
 
     //END
@@ -2581,8 +2583,6 @@ if (thehours == 08) {
 
     //hide or show overtime or save
 
-    var over_time;
-    var over_cost;
 
     if(totalcost1 < result) 
         {
@@ -2612,8 +2612,8 @@ if (thehours == 08) {
             over_cost = true;
         }
 
-    console.log("over_time", over_time);
-    console.log("over_cost", over_cost);
+    // console.log("over_time", over_time);
+    // console.log("over_cost", over_cost);
 
     });
 
@@ -2625,6 +2625,8 @@ if (thehours == 08) {
 
 
 //variables to port to dashboard / API
+
+
 
 function calculateVariables(){
 
@@ -2649,20 +2651,14 @@ val16 = parseInt(document.getElementById("number16").value, 10)*cost16;
 val17 = parseInt(document.getElementById("number17").value, 10)*cost17;
 
 
-
-
 //VALUES FOR DATABASE
 
-var client = $(".selected").text(); //String
-var time_allocated = thehours + themins; //Number
-var time_start = new Date(); //Date
-var cost_estimated = (val1+val2+val3+val4+val5+val6+val7+val8+val9+val10+val11+val12+val13+val14+val15+val16+val17); //Number
+client = $(".selected").text(); //String
+time_allocated = thehours + themins; //Number
+time_start = new Date(); //Date
+cost_estimated = (val1+val2+val3+val4+val5+val6+val7+val8+val9+val10+val11+val12+val13+val14+val15+val16+val17); //Number
 
 
-
-var over_time; //true or false
-
-var over_cost; //true or false
 // * attendees[]
 //    * role
 //    * team
@@ -2670,10 +2666,10 @@ var over_cost; //true or false
 //    * time_end
 //    * rate
 
-console.log("client", client);
-console.log("time_allocated",  time_allocated);
-console.log("time_start", time_start);
-console.log("cost_estimated", cost_estimated);
+// console.log("client", client);
+// console.log("time_allocated",  time_allocated);
+// console.log("time_start", time_start);
+// console.log("cost_estimated", cost_estimated);
 
 
 }
@@ -2688,48 +2684,50 @@ var timermins = Number($( ".mins" ).text())/60;
 
 
 //VALUES FOR DATABASE
-var time_end = new Date(); //Date
-var time_elapsed = timerhours + timermins; //Number
+time_end = new Date(); //Date
+time_elapsed = timerhours + timermins; //Number
 // var cost_total; //Number - REFER TO FUNCTION FINDTOTAL 
 
-console.log("time_end", time_end);
-console.log("time_elapsed", time_elapsed);
+// console.log("time_end", time_end);
+// console.log("time_elapsed", time_elapsed);
 }
 
-var role;
-var team;
-var rate;
-var time_start;
-var time_start_perc;
-var time_end;
-var time_end_perc;
+
+function post(){
+
+    //post to https://edelman-art-studio.herokuapp.com/burn-meter/add-meeting
+        
+    var data = { 
+            client: client,
+            time_allocated: time_allocated,
+            time_elapsed: time_elapsed,
+            time_start: time_start,
+            time_end: time_end,
+            cost_estimated, cost_estimated,
+            cost_total: cost_total,
+            over_time: over_time,
+            over_cost: over_cost,
+            attendees: attendees
+        };
+
+    var myJSON = JSON.stringify(data);
 
 
+    $.ajax({
 
-function attendeesArray(){
+       url: 'https://edelman-art-studio.herokuapp.com/burn-meter/add-meeting',
+       type: 'POST',
+       data: myJSON,
+       contentType: "application/json",
+       success: function(res) {
+        console.log('Data sent to server');
+        console.log(res); 
 
-
-    $(".one .add").click(function(){
-        var timerhours = Number($( ".hours" ).text());
-        var timermins = Number($( ".mins" ).text())/60;
-        role = $( ".one .positiontitle" ).text();
-        team = "Account";
-        rate = cost1;
-        time_start = new Date();
-        time_start_perc = timerhours + timermins;
-        var attendee = [role, team, time_start, time_start_perc, rate];
-
-        console.log(attendee);
+    }
     });
 
-    $(".one .minus").click(function(){
-        var timerhours = Number($( ".hours" ).text());
-        var timermins = Number($( ".mins" ).text())/60;
-        var time_end = new Date();
-        var time_end_perc = timerhours + timermins;
 
-        var attendee = [role, team, time_end, time_end_perc, rate];
+    }
 
-        console.log(attendee);
-    });
-}
+
+
