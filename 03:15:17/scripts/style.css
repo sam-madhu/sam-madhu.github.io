@@ -92,7 +92,7 @@
     	color: rgba(255,255,255,0.6);
 	}
 
-	.readyattendees, .readyhours, .readymins{
+	.readyattendees, .readyhours, .readymins, .readyclient{
 		color: rgba(255,255,255,1);	}
 
 	.one{
