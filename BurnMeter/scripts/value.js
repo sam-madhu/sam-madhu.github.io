@@ -1,3 +1,5 @@
+
+
 //GLOBAL VARS 
 
 var client;
@@ -9,7 +11,6 @@ var cost_estimated;
 var cost_total;
 var over_time;
 var over_cost;
-var ownerEmail;
 
 
 //hide minus
@@ -121,7 +122,7 @@ function saveEmail(){
         $('#email').fadeOut();
         $('.clientheader').show();
         $('#pick').fadeIn();
-       
+        console.log(user_email);
     }
 }
 
@@ -193,8 +194,8 @@ function getReady() {
     $(".areyouready").hide();
     $(".settime").hide();
     $("#timeline").hide();
-    $(".next2").fadeIn(500);
-    $("#ready").fadeIn(100);
+    $(".next2").fadeIn(100);
+    $("#ready").fadeIn(500);
     
 
     }
@@ -932,13 +933,11 @@ function summaryCalculate(){
 
     result =  (val1+val2+val3+val4+val5+val6+val7+val8+val9+val10+val11+val12+val13+val14+val15+val16+val17); 
 
-    // console.log(result);
-
+    var client = $( ".selected" ).text();
     var hours = $( "#hoursscroll option:selected" ).val();
     var mins = $( "#minsscroll option:selected" ).val();
-    var readyclient = $( ".selected" ).text();
 
-    $(".readyclient").text(readyclient); 
+    $(".readyclient").text(client);
     $(".readyattendees").text(result); 
     $(".readyhours").text(hours); 
     $(".readymins").text(mins); 
@@ -2697,8 +2696,7 @@ time_elapsed = timerhours + timermins; //Number
 function post(){
 
     //post to https://edelman-art-studio.herokuapp.com/burn-meter/add-meeting
-    console.log(user_email);
-    
+        
     var data = { 
             client: client,
             time_allocated: time_allocated,
@@ -2709,8 +2707,7 @@ function post(){
             cost_total: cost_total,
             over_time: over_time,
             over_cost: over_cost,
-            attendees: attendees,
-            ownerEmail: user_email
+            attendees: attendees
         };
 
     var myJSON = JSON.stringify(data);
